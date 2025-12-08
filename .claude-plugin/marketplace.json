@@ -1,57 +1,63 @@
 {
   "name": "single-person-workflow-marketplace",
-  "displayName": "Single Person Workflow Marketplace",
-  "displayName_zh": "单人工作流插件市场",
   "version": "1.0.0",
   "description": "Comprehensive plugin marketplace for solo developers and creators, featuring tools for writing, database design, product management, UI/UX design, and solution architecture",
   "owner": {
     "name": "shining319",
     "email": "lofterruyuan@gmail.com"
   },
-  "repository": "github:shining319/claude-code-single-person-workflow",
+  "homepage": "https://github.com/shining319/claude-code-single-person-workflow",
+  "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
   "plugins": [
     {
       "name": "academic-writing",
       "source": "./plugins/academic-writing",
       "version": "1.0.0",
-      "description": "Academic writing assistant for Chinese and English"
+      "description": "Academic writing assistant for Chinese and English",
+      "category": "writing"
     },
     {
       "name": "database-designer",
       "source": "./plugins/database-designer",
       "version": "1.0.0",
-      "description": "Complete database schema designer with ER diagrams"
+      "description": "Complete database schema designer with ER diagrams",
+      "category": "database"
     },
     {
       "name": "product-manager",
       "source": "./plugins/product-manager",
       "version": "1.0.0",
-      "description": "Product management from requirements to PRD"
+      "description": "Product management from requirements to PRD",
+      "category": "product-management"
     },
     {
       "name": "ui-designer",
       "source": "./plugins/ui-designer",
       "version": "1.0.0",
-      "description": "UI/UX design with detailed specifications"
+      "description": "UI/UX design with detailed specifications",
+      "category": "design"
     },
     {
       "name": "solution-architect",
       "source": "./plugins/solution-architect",
       "version": "1.0.0",
-      "description": "Solution architect for technical architecture design and technology selection"
+      "description": "Solution architect for technical architecture design and technology selection",
+      "category": "architecture"
     },
     {
       "name": "product-development-suite",
       "source": "./plugins/product-development-suite",
       "version": "1.0.0",
-      "description": "Complete suite with all skills included"
+      "description": "Complete suite with all skills included",
+      "category": "productivity"
     },
     {
       "name": "product-workflow-agents",
       "source": "./plugins/product-workflow-agents",
       "version": "1.0.0",
-      "description": "Intelligent workflow agents for complete product development"
+      "description": "Intelligent workflow agents for complete product development",
+      "category": "automation"
     }
   ]
 }
