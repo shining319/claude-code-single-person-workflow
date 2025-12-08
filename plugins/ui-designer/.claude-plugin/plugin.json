@@ -6,7 +6,7 @@
     "name": "shining319",
     "email": "lofterruyuan@gmail.com"
   },
-  "repository": "https://github.com/shining319/claude-code-single-person-workflow",
+  "repository": "github:shining319/claude-code-single-person-workflow",
   "license": "MIT",
   "keywords": ["ui-design", "ux-design", "interface", "design-specs"],
   "skills": [
