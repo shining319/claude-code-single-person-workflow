@@ -19,7 +19,7 @@ Comprehensive database design tool that creates complete database schemas with t
 ### Installation
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/database-designer
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/database-designer
 ```
 
 ### Usage
@@ -56,7 +56,7 @@ Use this plugin when you need to:
 ### 安装
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/database-designer
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/database-designer
 ```
 
 ### 使用场景

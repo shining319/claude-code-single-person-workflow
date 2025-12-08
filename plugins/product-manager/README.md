@@ -19,7 +19,7 @@ Senior product manager for requirements analysis, user research, and PRD creatio
 ### Installation
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/product-manager
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/product-manager
 ```
 
 ### Usage
@@ -58,7 +58,7 @@ Use this plugin when you need to:
 ### 安装
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/product-manager
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/product-manager
 ```
 
 ### 使用场景

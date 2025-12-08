@@ -19,7 +19,7 @@ UI/UX design specialist for interface design, specifications, and user flows. Tr
 ### Installation
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/ui-designer
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/ui-designer
 ```
 
 ### Usage
@@ -59,7 +59,7 @@ UI/UX设计专家，负责界面设计、规格说明和用户流程。将产品
 ### 安装
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/ui-designer
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/ui-designer
 ```
 
 ### 使用场景

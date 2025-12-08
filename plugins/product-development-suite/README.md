@@ -26,7 +26,7 @@ Complete all-in-one suite for single-person product development. Includes all fi
 ### Installation
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/product-development-suite
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/product-development-suite
 ```
 
 ### Use Cases
@@ -72,7 +72,7 @@ With this suite, you can:
 ### 安装
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/product-development-suite
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/product-development-suite
 ```
 
 ### 使用场景

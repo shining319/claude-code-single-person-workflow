@@ -19,7 +19,7 @@ Professional academic writing assistant for Chinese and English university assig
 ### Installation
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/academic-writing
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/academic-writing
 ```
 
 ### Usage
@@ -57,7 +57,7 @@ Assistant: [Activates academic-writing-style skill and produces natural, flowing
 ### 安装
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/academic-writing
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/academic-writing
 ```
 
 ### 使用场景

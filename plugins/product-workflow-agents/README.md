@@ -51,7 +51,7 @@ Complete Product Package
 ### Installation
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/product-workflow-agents
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/product-workflow-agents
 ```
 
 ### Use Cases
@@ -113,7 +113,7 @@ UI/UX设计师 → 设计规格 + 用户流程
 ### 安装
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/product-workflow-agents
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/product-workflow-agents
 ```
 
 ### 使用场景

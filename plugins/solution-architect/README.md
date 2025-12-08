@@ -19,7 +19,7 @@ Solution architect for technical architecture design, technology selection, and 
 ### Installation
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/solution-architect
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/solution-architect
 ```
 
 ### Usage
@@ -60,7 +60,7 @@ Use this plugin when you need to:
 ### 安装
 
 ```bash
-claude plugin install github:yourusername/claude-code-single-person-workflow/plugins/solution-architect
+claude plugin install github:shining319/claude-code-single-person-workflow/plugins/solution-architect
 ```
 
 ### 使用场景
