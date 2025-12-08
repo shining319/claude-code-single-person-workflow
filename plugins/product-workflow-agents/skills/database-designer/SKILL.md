@@ -305,11 +305,11 @@ Ref fk_name {
 
 ### Step 5: Finalize and Deliver
 
-1. **Save all files** to `./database/`:
-   - `./database/数据库设计文档.md` - Comprehensive design document
-   - `./database/schema.sql` - Executable SQL script
-   - `./database/drawdb-schema.json` - DrawDB JSON format
-   - `./database/drawdb-schema.dbml` - DrawDB DBML format
+1. **Save all files** to `/mnt/user-data/outputs/`:
+   - `数据库设计文档.md` - Comprehensive design document
+   - `schema.sql` - Executable SQL script
+   - `drawdb-schema.json` - DrawDB JSON format
+   - `drawdb-schema.dbml` - DrawDB DBML format
 
 2. **Provide summary** with:
    - Brief overview of design decisions

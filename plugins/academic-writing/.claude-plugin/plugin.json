@@ -4,15 +4,11 @@
   "description": "Personalized academic writing assistant for Chinese and English university assignments",
   "author": {
     "name": "shining319",
-    "email": "lofterruyuan@gmail.com"
+    "email": "lofterruyuan@gmail.com",
+    "url": "https://github.com/shining319"
   },
+  "homepage": "https://github.com/shining319/claude-code-single-person-workflow#readme",
   "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
-  "keywords": ["writing", "academic", "documentation", "chinese", "english"],
-  "skills": [
-    {
-      "name": "academic-writing-style",
-      "path": "skills/academic-writing-style/SKILL.md"
-    }
-  ]
+  "keywords": ["writing", "academic", "documentation", "chinese", "english"]
 }

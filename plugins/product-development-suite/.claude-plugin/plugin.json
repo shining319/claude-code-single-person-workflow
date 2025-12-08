@@ -4,31 +4,11 @@
   "description": "Complete suite for single-person product development: writing, database design, product management, UI/UX design, and solution architecture",
   "author": {
     "name": "shining319",
-    "email": "lofterruyuan@gmail.com"
+    "email": "lofterruyuan@gmail.com",
+    "url": "https://github.com/shining319"
   },
+  "homepage": "https://github.com/shining319/claude-code-single-person-workflow#readme",
   "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
-  "keywords": ["productivity", "product-development", "full-stack", "all-in-one"],
-  "skills": [
-    {
-      "name": "academic-writing-style",
-      "path": "skills/academic-writing-style/SKILL.md"
-    },
-    {
-      "name": "database-designer",
-      "path": "skills/database-designer/SKILL.md"
-    },
-    {
-      "name": "product-manager",
-      "path": "skills/product-manager/SKILL.md"
-    },
-    {
-      "name": "ui-designer",
-      "path": "skills/ui-designer/SKILL.md"
-    },
-    {
-      "name": "solution-architect",
-      "path": "skills/solution-architect/SKILL.md"
-    }
-  ]
+  "keywords": ["productivity", "product-development", "full-stack", "all-in-one"]
 }

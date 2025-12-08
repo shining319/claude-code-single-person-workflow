@@ -4,15 +4,11 @@
   "description": "Senior product manager for requirements analysis, user research, and PRD creation",
   "author": {
     "name": "shining319",
-    "email": "lofterruyuan@gmail.com"
+    "email": "lofterruyuan@gmail.com",
+    "url": "https://github.com/shining319"
   },
+  "homepage": "https://github.com/shining319/claude-code-single-person-workflow#readme",
   "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
-  "keywords": ["product-management", "prd", "user-research", "requirements"],
-  "skills": [
-    {
-      "name": "product-manager",
-      "path": "skills/product-manager/SKILL.md"
-    }
-  ]
+  "keywords": ["product-management", "prd", "user-research", "requirements"]
 }

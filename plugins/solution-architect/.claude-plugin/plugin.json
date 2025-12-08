@@ -4,15 +4,11 @@
   "description": "Solution architect for technical architecture design, technology selection, and deployment planning",
   "author": {
     "name": "shining319",
-    "email": "lofterruyuan@gmail.com"
+    "email": "lofterruyuan@gmail.com",
+    "url": "https://github.com/shining319"
   },
+  "homepage": "https://github.com/shining319/claude-code-single-person-workflow#readme",
   "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
-  "keywords": ["architecture", "solution-design", "tech-stack", "deployment"],
-  "skills": [
-    {
-      "name": "solution-architect",
-      "path": "skills/solution-architect/SKILL.md"
-    }
-  ]
+  "keywords": ["architecture", "solution-design", "tech-stack", "deployment"]
 }
