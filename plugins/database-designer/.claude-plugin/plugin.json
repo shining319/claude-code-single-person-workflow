@@ -6,10 +6,7 @@
     "name": "shining319",
     "email": "lofterruyuan@gmail.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shining319/claude-code-single-person-workflow"
-  },
+  "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
   "keywords": ["database", "schema", "design", "sql", "er-diagram"],
   "skills": [
