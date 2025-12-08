@@ -317,3 +317,28 @@ Comprehensive deployment planning guide including:
 - CI/CD workflow design
 - Monitoring, logging, and disaster recovery strategies
 
+## 文件输出规范
+
+**输出目录**: `./architecture/`
+
+**生成文件**:
+1. `./architecture/技术架构设计-[系统名称].md` - 完整架构文档，包含：
+   - 系统架构设计
+   - 技术栈选择和对比
+   - 部署架构
+   - 架构决策记录(ADR)
+   - 成本估算
+2. `./architecture/架构图.mmd` - Mermaid架构图源文件（可选）
+3. `./architecture/部署方案.md` - 详细部署文档（可选独立文件）
+
+**文件格式**:
+- 使用 Markdown 格式
+- 包含 Mermaid 图表（架构图、部署图）
+- 参考模板: `references/tech-stacks.md`, `references/deployment-guide.md`
+
+**注意事项**:
+- 文件名包含系统名称以便识别
+- 使用相对路径确保跨平台兼容性
+- 如果目录不存在，自动创建
+- Mermaid图表可内嵌在Markdown中或独立保存
+

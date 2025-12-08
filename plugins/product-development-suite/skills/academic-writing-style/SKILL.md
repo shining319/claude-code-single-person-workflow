@@ -151,3 +151,26 @@ Detailed examples and guidelines available in:
 - `references/chinese-examples.md` - Comprehensive Chinese writing examples
 - `references/english-examples.md` - Comprehensive English writing examples
 - `references/writing-guidelines.md` - Core writing principles and techniques
+
+## 文件输出规范
+
+**输出目录**: `./docs/writing/`
+
+**生成文件**:
+1. `./docs/writing/[文档标题].md` - 学术写作文档
+   - 支持中文或英文
+   - 自然流畅的学术风格
+   - 清晰的章节结构
+2. `./docs/writing/[文档标题]-双语版.md` - 中英文双语版本（如需要）
+
+**文件格式**:
+- 使用 Markdown 格式
+- 遵循学术写作规范
+- 参考指南: `references/writing-guidelines.md`
+- 支持中英文内容
+
+**注意事项**:
+- 文件名使用文档实际标题
+- 使用相对路径确保跨平台兼容性
+- 如果目录不存在，自动创建
+- 避免使用过多项目符号，使用自然段落
