@@ -2,7 +2,6 @@
   "name": "database-designer",
   "version": "1.0.0",
   "description": "Comprehensive database design tool that creates complete database schemas with tables, fields, indexes, and ER diagrams",
-  "description_zh": "完整的数据库设计工具,创建包含表、字段、索引和ER图的完整数据库架构",
   "author": {
     "name": "shining319",
     "email": "lofterruyuan@gmail.com"

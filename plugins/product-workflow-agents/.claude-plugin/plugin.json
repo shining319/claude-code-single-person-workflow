@@ -2,7 +2,6 @@
   "name": "product-workflow-agents",
   "version": "1.0.0",
   "description": "Intelligent agents that orchestrate multiple skills for complete product development workflows",
-  "description_zh": "智能代理,编排多个技能完成完整的产品开发工作流",
   "author": {
     "name": "shining319",
     "email": "lofterruyuan@gmail.com"

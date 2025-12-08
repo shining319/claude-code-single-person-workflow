@@ -2,7 +2,6 @@
   "name": "product-development-suite",
   "version": "1.0.0",
   "description": "Complete suite for single-person product development: writing, database design, product management, UI/UX design, and solution architecture",
-  "description_zh": "单人产品开发完整套件:写作、数据库设计、产品管理、UI/UX设计和解决方案架构",
   "author": {
     "name": "shining319",
     "email": "lofterruyuan@gmail.com"
