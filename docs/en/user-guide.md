@@ -6,14 +6,55 @@ This guide will help you effectively use the Single Person Workflow plugins to s
 
 ## Quick Reference
 
-| Task | Skill/Agent | Trigger Example |
-|------|-------------|-----------------|
-| Database design | Database Designer | "Design a database for..." |
-| Product requirements | Product Manager | "Create a PRD for..." |
-| UI/UX design | UI Designer | "Design the UI for..." |
-| Tech stack selection | Solution Architect | "Help me choose a tech stack..." |
-| Academic writing | Academic Writing | "Help me write a research paper..." |
-| Complete product | Full Stack Product Builder | "I want to build a complete product..." |
+| Task | Skill/Agent | Natural Language Trigger | Slash Command |
+|------|-------------|-------------------------|---------------|
+| Database design | Database Designer | "Design a database for..." | `/database-designer` or `/spw-db` |
+| Product requirements | Product Manager | "Create a PRD for..." | `/product-manager` or `/spw-prd` |
+| UI/UX design | UI Designer | "Design the UI for..." | `/ui-designer` or `/spw-ui` |
+| Tech stack selection | Solution Architect | "Help me choose a tech stack..." | `/solution-architect` or `/spw-arch` |
+| Academic writing | Academic Writing | "Help me write a research paper..." | `/academic-writing` or `/spw-writing` |
+| Complete product | Full Stack Product Builder | "I want to build a complete product..." | `/build-dev-workflow` |
+
+## Using Skills: Two Methods
+
+All skills in this marketplace can be activated in two ways:
+
+### Method 1: Natural Language (Automatic)
+Simply describe what you want in natural language. Claude Code will automatically detect and activate the appropriate skill based on your request.
+
+**Example:**
+```
+"Design a database for an e-commerce system"
+→ Automatically activates Database Designer skill
+```
+
+### Method 2: Slash Commands (Explicit)
+Use slash commands for direct, explicit skill activation. This is faster and guarantees the exact skill you want.
+
+**Available Slash Commands:**
+
+#### Single-Skill Plugin Commands
+- `/academic-writing [assignment type and topic]` - Academic writing assistant
+- `/database-designer [business domain or requirements]` - Complete database schema design
+- `/product-manager [product idea or requirements]` - Product management and PRD creation
+- `/ui-designer [page or feature to design]` - UI/UX design with specifications
+- `/solution-architect [system or application requirements]` - Technical architecture design
+
+#### Suite Plugin Commands (spw = single-person workflow)
+If you installed the product-development-suite or full marketplace:
+- `/spw-db [requirements]` - Database schema design
+- `/spw-ui [page or feature]` - UI/UX interface design
+- `/spw-prd [product idea]` - Product management and PRD
+- `/spw-arch [system requirements]` - Technical architecture
+- `/spw-writing [assignment topic]` - Academic writing
+
+#### Workflow Command
+- `/build-dev-workflow [product description]` - Complete product development workflow
+
+**Example:**
+```
+/database-designer "design a blog system database with users, posts, comments"
+```
 
 ## Individual Skills
 
@@ -27,11 +68,21 @@ This guide will help you effectively use the Single Person Workflow plugins to s
 - Preparing project documentation
 - Drafting case studies and analyses
 
-**Trigger Examples:**
+**Slash Commands:**
+- `/academic-writing [assignment type and topic]`
+- `/spw-writing [assignment type and topic]` (if using suite)
+
+**Natural Language Triggers:**
 ```
 "Help me write a technical report on cloud computing"
 "I need to create a research paper about AI ethics"
 "Write an academic analysis of microservices architecture"
+```
+
+**Slash Command Examples:**
+```
+/academic-writing "technical report on cloud computing security"
+/spw-writing "research paper about AI ethics in healthcare"
 ```
 
 **Output:**
@@ -50,11 +101,21 @@ This guide will help you effectively use the Single Person Workflow plugins to s
 - Generating ER diagrams
 - Writing migration scripts
 
-**Trigger Examples:**
+**Slash Commands:**
+- `/database-designer [business domain or requirements]`
+- `/spw-db [requirements]` (if using suite)
+
+**Natural Language Triggers:**
 ```
 "Design a database for an e-commerce system"
 "Create a schema for a project management tool"
 "I need a database design for a social media platform"
+```
+
+**Slash Command Examples:**
+```
+/database-designer "e-commerce system with products, users, orders, payments"
+/spw-db "project management tool with tasks, teams, milestones"
 ```
 
 **Output:**
@@ -80,11 +141,21 @@ This guide will help you effectively use the Single Person Workflow plugins to s
 - Planning MVP features
 - Defining user stories
 
-**Trigger Examples:**
+**Slash Commands:**
+- `/product-manager [product idea or requirements]`
+- `/spw-prd [product idea]` (if using suite)
+
+**Natural Language Triggers:**
 ```
 "Create a PRD for a mobile task management app"
 "Analyze requirements for a fitness tracking platform"
 "Help me define user personas for an e-learning system"
+```
+
+**Slash Command Examples:**
+```
+/product-manager "mobile task management app with team collaboration"
+/spw-prd "fitness tracking platform with social features"
 ```
 
 **Output:**
@@ -105,11 +176,21 @@ This guide will help you effectively use the Single Person Workflow plugins to s
 - Writing detailed design specifications
 - Creating user flow diagrams
 
-**Trigger Examples:**
+**Slash Commands:**
+- `/ui-designer [page or feature to design]`
+- `/spw-ui [page or feature]` (if using suite)
+
+**Natural Language Triggers:**
 ```
 "Design the UI for my dashboard application"
 "Create a design specification for a mobile checkout flow"
 "Plan the information architecture for an admin panel"
+```
+
+**Slash Command Examples:**
+```
+/ui-designer "user dashboard with analytics widgets and charts"
+/spw-ui "mobile checkout flow with payment options"
 ```
 
 **Output:**
@@ -130,11 +211,21 @@ This guide will help you effectively use the Single Person Workflow plugins to s
 - Reviewing architecture decisions
 - Creating technical proposals
 
-**Trigger Examples:**
+**Slash Commands:**
+- `/solution-architect [system or application requirements]`
+- `/spw-arch [system requirements]` (if using suite)
+
+**Natural Language Triggers:**
 ```
 "Design the technical architecture for a real-time chat application"
 "Help me choose a tech stack for a SaaS platform"
 "Create a deployment plan for a microservices system"
+```
+
+**Slash Command Examples:**
+```
+/solution-architect "real-time chat application with WebSocket support"
+/spw-arch "SaaS platform with multi-tenant architecture"
 ```
 
 **Output:**
@@ -155,9 +246,17 @@ This guide will help you effectively use the Single Person Workflow plugins to s
 - Need end-to-end workflow coordination
 - Want automatic task orchestration
 
-**Trigger Example:**
+**Slash Command:**
+- `/build-dev-workflow [product description]`
+
+**Natural Language Trigger:**
 ```
 "I want to build a complete e-commerce platform"
+```
+
+**Slash Command Example:**
+```
+/build-dev-workflow "e-commerce platform with product catalog, shopping cart, and payment processing"
 ```
 
 **Workflow:**
@@ -314,11 +413,46 @@ For complete products, let the Full Stack Product Builder coordinate:
 
 ### Switching Between Skills
 
-Skills activate automatically based on your request. To explicitly activate a skill:
+Skills activate automatically based on your request. You have three ways to activate a specific skill:
 
+**Method 1: Natural language (automatic detection)**
+```
+"Design a database for an e-commerce system"
+```
+
+**Method 2: Explicit skill mention**
 ```
 "Use the database designer skill to create a schema for..."
 ```
+
+**Method 3: Slash commands (recommended for precision)**
+```
+/database-designer "e-commerce system"
+```
+
+### Slash Command Best Practices
+
+1. **Be specific with your arguments**
+   ```
+   Good: /database-designer "blog system with users, posts, comments, tags"
+   Poor: /database-designer "blog"
+   ```
+
+2. **Use quotes for multi-word arguments**
+   ```
+   /spw-prd "task management app with team collaboration features"
+   ```
+
+3. **Combine with natural follow-ups**
+   ```
+   /database-designer "e-commerce system"
+   [After output] "Add a wishlist feature to the database"
+   ```
+
+4. **Choose the right command variant**
+   - Single plugin: `/database-designer` (if you installed individual plugin)
+   - Suite plugin: `/spw-db` (if you installed product-development-suite)
+   - Both work the same way, use whichever you have installed
 
 ### Saving Output
 
@@ -399,8 +533,9 @@ For complex requests needing multiple skills:
 
 ## Examples
 
-### Example 1: E-commerce Platform
+### Example 1: E-commerce Platform (Using Workflow Command)
 
+**Natural Language:**
 ```
 User: "I want to build a complete e-commerce platform"
 
@@ -412,8 +547,14 @@ Full Stack Product Builder activates:
 5. Generates complete documentation
 ```
 
-### Example 2: Blog System
+**Using Slash Command:**
+```
+/build-dev-workflow "e-commerce platform with product catalog, shopping cart, checkout, and payment integration"
+```
 
+### Example 2: Blog System (Using Individual Commands)
+
+**Natural Language:**
 ```
 User: "Create a PRD for a blogging platform with comments and tags"
 → Product Manager creates detailed requirements
@@ -425,8 +566,20 @@ User: "Design the admin interface"
 → UI Designer creates admin panel specifications
 ```
 
-### Example 3: API Service
+**Using Slash Commands:**
+```
+/product-manager "blogging platform with comments, tags, and user management"
+[Review output]
 
+/database-designer "blog system based on above PRD with posts, users, comments, tags, categories"
+[Review output]
+
+/ui-designer "admin interface for blog management with post editor and analytics"
+```
+
+### Example 3: API Service (Using Suite Commands)
+
+**Natural Language:**
 ```
 User: "Design architecture for a RESTful API service"
 → Solution Architect creates API architecture
@@ -436,6 +589,17 @@ User: "Create the database schema to support this API"
 
 User: "Generate API documentation"
 → Documentation Generator creates comprehensive API docs
+```
+
+**Using Slash Commands:**
+```
+/spw-arch "RESTful API service with authentication, rate limiting, and caching"
+[Review output]
+
+/spw-db "database schema to support the API with users, sessions, and audit logs"
+[Review output]
+
+/spw-writing "API documentation covering all endpoints, authentication, and error handling"
 ```
 
 ## Advanced Usage

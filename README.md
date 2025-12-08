@@ -73,14 +73,56 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 
 ### How to Use
 
-Once installed, simply describe what you need:
+Once installed, you can activate skills in two ways:
+
+#### Method 1: Natural Language (Automatic)
+Simply describe what you need:
 
 - "Design a database for an e-commerce system" → Database Designer activates
 - "Create a PRD for my mobile app" → Product Manager activates
 - "Design the UI for my dashboard" → UI Designer activates
 - "Help me choose a tech stack" → Solution Architect activates
-- "Write technical documentation" → Technical Writer activates
+- "Write technical documentation" → Academic Writing activates
 - "I want to build a complete product" → Full Stack Product Builder orchestrates everything
+
+#### Method 2: Slash Commands (Explicit)
+Use direct commands for guaranteed activation:
+
+**Individual Plugin Commands:**
+```bash
+/database-designer "e-commerce system with products, orders, payments"
+/product-manager "mobile fitness tracking app"
+/ui-designer "user dashboard with analytics widgets"
+/solution-architect "microservices architecture for real-time chat"
+/academic-writing "technical report on cloud computing"
+```
+
+**Suite Plugin Commands (spw = single-person workflow):**
+```bash
+/spw-db "blog database with users, posts, comments"
+/spw-prd "task management application"
+/spw-ui "admin panel interface"
+/spw-arch "SaaS platform architecture"
+/spw-writing "research paper on AI ethics"
+```
+
+**Workflow Command:**
+```bash
+/build-dev-workflow "complete e-commerce platform with payment integration"
+```
+
+> **Tip:** Slash commands provide faster, more precise skill activation compared to natural language.
+
+### Quick Command Reference
+
+| Task | Individual Command | Suite Command |
+|------|-------------------|---------------|
+| Database Design | `/database-designer [requirements]` | `/spw-db [requirements]` |
+| Product Requirements | `/product-manager [idea]` | `/spw-prd [idea]` |
+| UI/UX Design | `/ui-designer [page/feature]` | `/spw-ui [page/feature]` |
+| Architecture Design | `/solution-architect [system]` | `/spw-arch [system]` |
+| Academic Writing | `/academic-writing [topic]` | `/spw-writing [topic]` |
+| Full Workflow | `/build-dev-workflow [product description]` | — |
 
 ### Documentation
 
@@ -156,14 +198,56 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 
 ### 如何使用
 
-安装后，只需描述您的需求：
+安装后,您可以通过两种方式激活技能:
+
+#### 方法一:自然语言(自动)
+只需描述您的需求:
 
 - "为电商系统设计数据库" → 数据库设计器激活
 - "为我的移动应用创建PRD" → 产品经理激活
 - "为我的仪表板设计UI" → UI设计师激活
 - "帮我选择技术栈" → 解决方案架构师激活
-- "编写技术文档" → 技术文档专家激活
+- "编写技术文档" → 学术写作激活
 - "我想构建一个完整产品" → 全栈产品构建者编排一切
+
+#### 方法二:斜杠命令(显式)
+使用直接命令以保证激活:
+
+**单个插件命令:**
+```bash
+/database-designer "包含商品、订单、支付的电商系统"
+/product-manager "移动健身追踪应用"
+/ui-designer "包含分析小部件的用户仪表板"
+/solution-architect "实时聊天的微服务架构"
+/academic-writing "关于云计算的技术报告"
+```
+
+**套件插件命令 (spw = 单人工作流):**
+```bash
+/spw-db "包含用户、文章、评论的博客数据库"
+/spw-prd "任务管理应用"
+/spw-ui "管理面板界面"
+/spw-arch "SaaS平台架构"
+/spw-writing "关于AI伦理的研究论文"
+```
+
+**工作流命令:**
+```bash
+/build-dev-workflow "具有支付集成的完整电商平台"
+```
+
+> **提示:** 与自然语言相比,斜杠命令提供更快速、更精确的技能激活。
+
+### 快速命令参考
+
+| 任务 | 单个插件命令 | 套件命令 |
+|------|------------|---------|
+| 数据库设计 | `/database-designer [需求]` | `/spw-db [需求]` |
+| 产品需求 | `/product-manager [想法]` | `/spw-prd [想法]` |
+| UI/UX设计 | `/ui-designer [页面/功能]` | `/spw-ui [页面/功能]` |
+| 架构设计 | `/solution-architect [系统]` | `/spw-arch [系统]` |
+| 学术写作 | `/academic-writing [主题]` | `/spw-writing [主题]` |
+| 完整工作流 | `/build-dev-workflow [产品描述]` | — |
 
 ### 文档
 

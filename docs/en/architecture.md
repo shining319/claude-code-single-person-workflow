@@ -40,9 +40,15 @@ Claude Code CLI
 
 **Characteristics:**
 - Single responsibility (one skill, one purpose)
-- Triggered by natural language
+- Triggered by natural language or slash commands
 - Produces specific output formats
 - Stateless (each invocation is independent)
+
+**Activation Methods:**
+1. **Natural Language**: Automatic detection based on user intent
+   - Example: "Design a database for my app" → Database Designer activates
+2. **Slash Commands**: Explicit activation via command
+   - Example: `/database-designer "e-commerce system"` → Direct activation
 
 **Implementation:**
 ```
@@ -99,23 +105,52 @@ plugins/
 
 ```
 plugin-name/
-├─── skill.md              # Required: Skill definition
+├─── .claude-plugin/
+│    └─── plugin.json      # Plugin metadata
+├─── skills/               # Skill definitions
+│    └─── skill-name/
+│         └─── SKILL.md
 └─── README.md             # Optional: Documentation
 ```
 
-### Full Plugin
+### Full Plugin with Slash Commands
 
 ```
 plugin-name/
-├─── skill.md              # Skill definition
+├─── .claude-plugin/
+│    └─── plugin.json      # Plugin metadata
+├─── skills/               # Skill definitions
+│    └─── skill-name/
+│         ├─── SKILL.md
+│         └─── references/ # Reference materials
+├─── commands/             # Slash commands
+│    ├─── command-1.md
+│    └─── command-2.md
 ├─── README.md             # Documentation
-├─── examples/             # Usage examples
-│    ├─── example-1.md
-│    └─── example-2.md
-├─── templates/            # Output templates
-│    └─── template.md
-└─── tests/                # Test cases
-     └─── test-cases.md
+└─── LICENSE.txt           # License
+```
+
+### Slash Command Structure
+
+Each slash command is a Markdown file in the `commands/` directory:
+
+```markdown
+---
+description: Brief command description
+argument-hint: "[parameter hint]"
+---
+
+Use the SKILL_NAME skill. User input: $ARGUMENTS
+```
+
+**Example:** `/database-designer` command file:
+```markdown
+---
+description: Complete database schema design with ER diagrams
+argument-hint: "[business domain or requirements]"
+---
+
+Use the database-designer skill. User input: $ARGUMENTS
 ```
 
 ## Skill Definition Format
@@ -213,12 +248,29 @@ User Request
 
 ### Skill Activation
 
+Skills can be activated through two pathways:
+
+#### **Method 1: Natural Language Activation**
 1. **User Input:** User types natural language request
 2. **Pattern Matching:** Claude Code matches request to skill triggers
-3. **Skill Loading:** Corresponding skill.md is loaded
+3. **Skill Loading:** Corresponding SKILL.md is loaded
 4. **Context Injection:** Skill instructions are injected into context
 5. **Execution:** Claude processes request using skill instructions
 6. **Output:** Result is formatted and presented
+
+#### **Method 2: Slash Command Activation**
+1. **User Input:** User types slash command (e.g., `/database-designer "requirements"`)
+2. **Command Parsing:** Claude Code parses command and arguments
+3. **Direct Skill Loading:** Corresponding skill is directly activated
+4. **Context Injection:** Command expands to skill invocation
+5. **Execution:** Claude processes with skill instructions
+6. **Output:** Result is formatted and presented
+
+**Advantages of Slash Commands:**
+- Guaranteed skill activation (no ambiguity)
+- Faster execution (no pattern matching needed)
+- Explicit intent declaration
+- Better for automation and scripting
 
 ### Context Management
 
@@ -252,12 +304,16 @@ Skills and agents can be combined to create complex workflows.
 
 ### 3. Discoverability
 
-Skills activate automatically based on natural language triggers.
+Skills can be discovered and activated in multiple ways.
 
 **Implementation:**
-- Broad trigger patterns for flexibility
-- Overlapping triggers for related skills
-- Contextual activation based on conversation
+- **Natural Language Triggers**: Broad patterns for flexibility
+  - Overlapping triggers for related skills
+  - Contextual activation based on conversation
+- **Slash Commands**: Direct command discovery
+  - Auto-completion in Claude Code interface
+  - Help documentation listing all commands
+  - Argument hints for proper usage
 
 ### 4. Consistency
 
@@ -395,14 +451,43 @@ Generated outputs should:
 2. **CI/CD Pipelines:** Automated documentation generation
 3. **Project Templates:** Initialized project structures
 
+## Command Naming Conventions
+
+### Single-Skill Plugins
+Individual plugins use the full plugin name as their command:
+- `/database-designer` - Database Designer plugin
+- `/product-manager` - Product Manager plugin
+- `/ui-designer` - UI Designer plugin
+- `/solution-architect` - Solution Architect plugin
+- `/academic-writing` - Academic Writing plugin
+
+### Suite Plugins
+Suite plugins use the `spw-` prefix (single-person workflow):
+- `/spw-db` - Database design (from product-development-suite)
+- `/spw-prd` - Product requirements (from product-development-suite)
+- `/spw-ui` - UI design (from product-development-suite)
+- `/spw-arch` - Architecture design (from product-development-suite)
+- `/spw-writing` - Academic writing (from product-development-suite)
+
+### Workflow Plugins
+Workflow plugins use descriptive workflow names:
+- `/build-dev-workflow` - Complete product development workflow
+
 ## Troubleshooting Architecture
 
 ### Common Issues
 
-**Skill Not Activating:**
+**Skill Not Activating (Natural Language):**
 - Check trigger pattern matches
-- Verify skill.md is properly formatted
+- Verify SKILL.md is properly formatted
 - Ensure plugin is installed
+- **Solution**: Use slash commands for guaranteed activation
+
+**Slash Command Not Found:**
+- Verify plugin installation: `claude plugin list`
+- Check command exists in `commands/` directory
+- Ensure command file has proper frontmatter
+- Restart Claude Code session if needed
 
 **Agent Coordination Failures:**
 - Review workflow logic

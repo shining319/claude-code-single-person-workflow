@@ -10,55 +10,62 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 #### Slash Commands
-- **16 minimal slash commands** for quick access to skills and workflows
-  - **5 single-skill plugin commands**: Use full plugin names for clarity
-    - `/academic-writing` - Academic writing assistant
-    - `/database-designer` - Database schema design
-    - `/product-manager` - PRD creation
-    - `/ui-designer` - UI/UX design
-    - `/solution-architect` - Technical architecture
-  - **5 product-development-suite commands**: Use `spw-` prefix (single-person workflow)
-    - `/spw-db` - Database design
-    - `/spw-ui` - UI design
-    - `/spw-prd` - Product management
-    - `/spw-arch` - Architecture design
-    - `/spw-writing` - Academic writing
-  - **6 product-workflow-agents commands**: Suite commands + workflow orchestration
-    - All 5 `spw-*` commands from suite
-    - `/build-dev-workflow` - Complete product development workflow
+- **11 slash commands** for quick access to skills and workflows
+  - **5 single-skill plugin commands**: Individual plugin activation
+    - `/academic-writing [topic]` - Academic writing assistant
+    - `/database-designer [requirements]` - Database schema design
+    - `/product-manager [idea]` - Product requirements and PRD creation
+    - `/ui-designer [page/feature]` - UI/UX design specifications
+    - `/solution-architect [system]` - Technical architecture design
+  - **5 suite plugin commands**: Product-development-suite shortcuts (spw = single-person workflow)
+    - `/spw-db [requirements]` - Database design
+    - `/spw-ui [page/feature]` - UI design
+    - `/spw-prd [idea]` - Product requirements
+    - `/spw-arch [system]` - Architecture design
+    - `/spw-writing [topic]` - Academic writing
+  - **1 workflow command**: Complete development workflow orchestration
+    - `/build-dev-workflow [product description]` - End-to-end product development
 
 #### Command Features
-- Follow Claude Code official specification
-- Minimal frontmatter (4-6 lines per command)
-- Support for `$ARGUMENTS` parameter passing
-- Only official fields: `description`, `argument-hint`, `allowed-tools`, `model`
-- No `description_zh` field (not supported by Claude Code)
+- Follows Claude Code official specification
+- Minimal frontmatter with only supported fields
+- Dynamic parameter passing via `$ARGUMENTS`
+- Auto-completion support in Claude Code CLI
+- Argument hints for better user experience
 
 ### Changed
 
-#### Documentation
-- **CLAUDE.md**: Added comprehensive "Slash Commands" chapter
-  - Command structure explanation
-  - Complete command reference tables
-  - Usage examples
-  - Creating new commands guide
-- **Plugin Structure**: Enhanced diagram to include `.claude/commands/` directory
-- **File Naming Conventions**: Added command file naming rules (`kebab-case.md`)
+#### Documentation Updates (All Files)
+- **README.md**:
+  - Added dual activation methods (Natural Language vs Slash Commands)
+  - Added Quick Command Reference table
+  - Included slash command examples for all plugin types
+- **docs/en/user-guide.md** & **docs/zh/user-guide.md**:
+  - Added "Using Skills: Two Methods" comprehensive section
+  - Updated Quick Reference table with slash command column
+  - Added slash command examples for all 5 skills and workflow agents
+  - Added "Slash Command Best Practices" section
+  - Enhanced all usage examples to show both activation methods
+- **docs/en/installation.md** & **docs/zh/installation.md**:
+  - Added "Testing Slash Commands" section
+  - Organized test commands by plugin type
+  - Enhanced troubleshooting with slash command solutions
+- **docs/en/architecture.md** & **docs/zh/architecture.md**:
+  - Updated plugin structure to include `commands/` directory
+  - Added slash command activation pathway documentation
+  - Added "Command Naming Conventions" section
+  - Enhanced skill activation flow with dual methods
+  - Updated troubleshooting for slash command issues
 
 ### Technical Details
-- **Command files location**: `plugins/*/.claude/commands/*.md`
-- **Template structure**:
-  ```markdown
-  ---
-  description: Command description
-  argument-hint: "[parameter hint]"
-  ---
-
-  Use the SKILL_NAME skill. User input: $ARGUMENTS
-  ```
-- **Total commands**: 16 (5 + 5 + 6)
-- **Average file size**: 4-6 lines
-- **Compliance**: Claude Code official specification
+- **Command files location**: `plugins/*/commands/*.md`
+- **Command structure**: Markdown files with YAML frontmatter
+- **Total commands**: 11 unique slash commands
+- **Command naming**:
+  - Individual plugins: Full plugin name (`/database-designer`)
+  - Suite plugins: `spw-` prefix (`/spw-db`)
+  - Workflow: Descriptive name (`/build-dev-workflow`)
+- **Compliance**: Claude Code official plugin specification
 
 ## [1.0.0] - 2025-12-07
 

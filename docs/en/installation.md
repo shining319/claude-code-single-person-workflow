@@ -97,6 +97,54 @@ You should see your installed plugins listed. To verify a specific skill is work
 claude skill list
 ```
 
+## Testing Slash Commands
+
+After installation, you can test the slash commands to verify they work correctly:
+
+### For Individual Plugins
+
+If you installed individual plugins, test with their specific commands:
+
+```bash
+# Test database designer
+/database-designer "simple blog database"
+
+# Test product manager
+/product-manager "mobile app idea"
+
+# Test UI designer
+/ui-designer "login page"
+
+# Test solution architect
+/solution-architect "web application"
+
+# Test academic writing
+/academic-writing "technical report topic"
+```
+
+### For Suite Plugins
+
+If you installed product-development-suite or the full marketplace, test the suite commands:
+
+```bash
+# Test suite commands (spw = single-person workflow)
+/spw-db "e-commerce database"
+/spw-prd "fitness app"
+/spw-ui "dashboard page"
+/spw-arch "microservices system"
+/spw-writing "research paper"
+```
+
+### For Workflow Plugin
+
+If you installed product-workflow-agents or the full marketplace, test the workflow command:
+
+```bash
+/build-dev-workflow "simple todo application"
+```
+
+**Note:** Type the slash command in your Claude Code session, and you should see command completion and hints appearing.
+
 ## Updating Plugins
 
 To update all installed plugins to the latest version:
@@ -141,8 +189,16 @@ If a skill doesn't activate when you expect it to:
 
 1. Check that the plugin is installed: `claude plugin list`
 2. Verify the skill is available: `claude skill list`
-3. Try using more specific trigger words (see [User Guide](user-guide.md))
-4. Restart your Claude Code session
+3. Try using slash commands instead of natural language
+4. Try using more specific trigger words (see [User Guide](user-guide.md))
+5. Restart your Claude Code session
+
+**Quick Fix:** If natural language isn't working, use slash commands for guaranteed activation:
+```bash
+# Instead of: "Design a database for my app"
+# Use:
+/database-designer "my app database"
+```
 
 ### Permission Issues
 

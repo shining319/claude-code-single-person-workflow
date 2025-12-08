@@ -85,17 +85,65 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 
 ## 验证安装
 
-安装后，验证插件是否可用：
+安装后,验证插件是否可用:
 
 ```bash
 claude plugin list
 ```
 
-您应该能看到已安装的插件列表。要验证特定技能是否正常工作：
+您应该能看到已安装的插件列表。要验证特定技能是否正常工作:
 
 ```bash
 claude skill list
 ```
+
+## 测试斜杠命令
+
+安装后,您可以测试斜杠命令以验证它们是否正常工作:
+
+### 单个插件
+
+如果您安装了单个插件,使用其特定命令进行测试:
+
+```bash
+# 测试数据库设计器
+/database-designer "简单博客数据库"
+
+# 测试产品经理
+/product-manager "移动应用想法"
+
+# 测试UI设计师
+/ui-designer "登录页面"
+
+# 测试解决方案架构师
+/solution-architect "Web应用程序"
+
+# 测试学术写作
+/academic-writing "技术报告主题"
+```
+
+### 套件插件
+
+如果您安装了 product-development-suite 或完整市场,测试套件命令:
+
+```bash
+# 测试套件命令 (spw = 单人工作流)
+/spw-db "电商数据库"
+/spw-prd "健身应用"
+/spw-ui "仪表板页面"
+/spw-arch "微服务系统"
+/spw-writing "研究论文"
+```
+
+### 工作流插件
+
+如果您安装了 product-workflow-agents 或完整市场,测试工作流命令:
+
+```bash
+/build-dev-workflow "简单待办事项应用"
+```
+
+**注意:** 在您的 Claude Code 会话中输入斜杠命令,您应该会看到命令补全和提示出现。
 
 ## 更新插件
 
@@ -137,12 +185,20 @@ claude plugin uninstall github:shining319/claude-code-single-person-workflow
 
 ### 技能未激活
 
-如果技能没有按预期激活：
+如果技能没有按预期激活:
 
-1. 检查插件是否已安装：`claude plugin list`
-2. 验证技能是否可用：`claude skill list`
-3. 尝试使用更具体的触发词（参见[用户指南](user-guide.md)）
-4. 重启您的 Claude Code 会话
+1. 检查插件是否已安装: `claude plugin list`
+2. 验证技能是否可用: `claude skill list`
+3. 尝试使用斜杠命令而不是自然语言
+4. 尝试使用更具体的触发词(参见[用户指南](user-guide.md))
+5. 重启您的 Claude Code 会话
+
+**快速修复:** 如果自然语言不起作用,使用斜杠命令以保证激活:
+```bash
+# 不要使用: "为我的应用设计数据库"
+# 而应使用:
+/database-designer "我的应用数据库"
+```
 
 ### 权限问题
 
