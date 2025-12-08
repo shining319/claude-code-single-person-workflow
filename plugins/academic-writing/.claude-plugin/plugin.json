@@ -1,0 +1,22 @@
+{
+  "name": "academic-writing",
+  "version": "1.0.0",
+  "description": "Personalized academic writing assistant for Chinese and English university assignments",
+  "description_zh": "个性化学术写作助手,支持中英文大学作业、项目文档和技术分析",
+  "author": {
+    "name": "shining319",
+    "email": "lofterruyuan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shining319/claude-code-single-person-workflow"
+  },
+  "license": "MIT",
+  "keywords": ["writing", "academic", "documentation", "chinese", "english"],
+  "skills": [
+    {
+      "name": "academic-writing-style",
+      "path": "skills/academic-writing-style/SKILL.md"
+    }
+  ]
+}

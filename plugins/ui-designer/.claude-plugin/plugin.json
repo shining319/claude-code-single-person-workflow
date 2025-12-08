@@ -1,0 +1,22 @@
+{
+  "name": "ui-designer",
+  "version": "1.0.0",
+  "description": "UI/UX design specialist for interface design, specifications, and user flows",
+  "description_zh": "UI/UX设计专家,负责界面设计、规格说明和用户流程",
+  "author": {
+    "name": "shining319",
+    "email": "lofterruyuan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shining319/claude-code-single-person-workflow"
+  },
+  "license": "MIT",
+  "keywords": ["ui-design", "ux-design", "interface", "design-specs"],
+  "skills": [
+    {
+      "name": "ui-designer",
+      "path": "skills/ui-designer/SKILL.md"
+    }
+  ]
+}

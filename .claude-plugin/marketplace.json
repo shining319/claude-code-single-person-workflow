@@ -1,0 +1,68 @@
+{
+  "name": "single-person-workflow-marketplace",
+  "displayName": "Single Person Workflow Marketplace",
+  "displayName_zh": "单人工作流插件市场",
+  "version": "1.0.0",
+  "description": "Comprehensive plugin marketplace for solo developers and creators, featuring tools for writing, database design, product management, UI/UX design, and solution architecture",
+  "description_zh": "面向独立开发者和创作者的综合插件市场,提供写作、数据库设计、产品管理、UI/UX设计和解决方案架构工具",
+  "owner": {
+    "name": "shining319",
+    "email": "lofterruyuan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shining319/claude-code-single-person-workflow"
+  },
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "academic-writing",
+      "source": "./plugins/academic-writing",
+      "version": "1.0.0",
+      "description": "Academic writing assistant for Chinese and English",
+      "description_zh": "中英文学术写作助手"
+    },
+    {
+      "name": "database-designer",
+      "source": "./plugins/database-designer",
+      "version": "1.0.0",
+      "description": "Complete database schema designer with ER diagrams",
+      "description_zh": "完整的数据库架构设计器"
+    },
+    {
+      "name": "product-manager",
+      "source": "./plugins/product-manager",
+      "version": "1.0.0",
+      "description": "Product management from requirements to PRD",
+      "description_zh": "从需求到PRD的产品管理"
+    },
+    {
+      "name": "ui-designer",
+      "source": "./plugins/ui-designer",
+      "version": "1.0.0",
+      "description": "UI/UX design with detailed specifications",
+      "description_zh": "UI/UX设计及详细规格"
+    },
+    {
+      "name": "solution-architect",
+      "source": "./plugins/solution-architect",
+      "version": "1.0.0",
+      "description": "Solution architect for technical architecture design and technology selection",
+      "description_zh": "解决方案架构师,提供技术架构设计和技术选型"
+    },
+    {
+      "name": "product-development-suite",
+      "source": "./plugins/product-development-suite",
+      "version": "1.0.0",
+      "description": "Complete suite with all skills included",
+      "description_zh": "包含所有技能的完整套件"
+    },
+    {
+      "name": "product-workflow-agents",
+      "source": "./plugins/product-workflow-agents",
+      "version": "1.0.0",
+      "description": "Intelligent workflow agents for complete product development",
+      "description_zh": "用于完整产品开发的智能工作流代理"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "single-person-workflow-marketplace",
+  "version": "1.0.0",
+  "description": "Claude Code plugin marketplace for solo developers and creators",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "sync": "node scripts/sync-skills.js",
+    "test": "npm run validate"
+  },
+  "keywords": [
+    "claude-code",
+    "plugins",
+    "marketplace",
+    "productivity",
+    "solo-developer"
+  ],
+  "author": "Shining319",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shining319/claude-code-single-person-workflow.git"
+  }
+}

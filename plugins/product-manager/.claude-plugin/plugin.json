@@ -1,0 +1,22 @@
+{
+  "name": "product-manager",
+  "version": "1.0.0",
+  "description": "Senior product manager for requirements analysis, user research, and PRD creation",
+  "description_zh": "资深产品经理,负责需求分析、用户研究和PRD创建",
+  "author": {
+    "name": "shining319",
+    "email": "lofterruyuan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shining319/claude-code-single-person-workflow"
+  },
+  "license": "MIT",
+  "keywords": ["product-management", "prd", "user-research", "requirements"],
+  "skills": [
+    {
+      "name": "product-manager",
+      "path": "skills/product-manager/SKILL.md"
+    }
+  ]
+}
