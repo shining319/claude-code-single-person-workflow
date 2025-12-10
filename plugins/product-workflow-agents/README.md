@@ -62,6 +62,27 @@ Perfect for:
 - **Product Teams**: Maintain consistency across all deliverables
 - **Developers**: Get comprehensive product specifications
 
+### Output File Locations
+
+All workflow deliverables are organized in `outputs/<project-name>/` with complete project structure:
+
+```
+outputs/
+└── <project-name>/
+    ├── docs/                    # Product documentation
+    ├── architecture/            # Technical architecture
+    ├── database/                # Database design
+    ├── design/                  # UI/UX design
+    └── writing/                 # Technical documentation
+```
+
+**File Naming Convention:**
+- Use kebab-case for all files
+- Include version/date when needed
+- Use descriptive names
+
+**Alternative:** Traditional project structure using `./docs/`, `./database/`, `./design/`, `./architecture/` directories.
+
 ---
 
 ## 中文
@@ -123,6 +144,27 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 - **技术创始人**: 将想法转化为有文档的系统
 - **产品团队**: 保持所有交付物的一致性
 - **开发者**: 获得全面的产品规格
+
+### 文件输出位置
+
+所有工作流交付物按完整项目结构组织在 `outputs/<project-name>/` 目录下：
+
+```
+outputs/
+└── <project-name>/
+    ├── docs/                    # 产品文档
+    ├── architecture/            # 技术架构
+    ├── database/                # 数据库设计
+    ├── design/                  # UI/UX 设计
+    └── writing/                 # 技术文档
+```
+
+**文件命名规范：**
+- 所有文件使用短横线命名法
+- 需要时包含版本/日期
+- 使用描述性名称
+
+**替代方案：** 传统项目结构使用 `./docs/`、`./database/`、`./design/`、`./architecture/` 目录。
 
 ## License
 

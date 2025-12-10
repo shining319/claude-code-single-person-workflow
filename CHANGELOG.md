@@ -28,13 +28,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Plugin configurations (`plugin.json`) do not specify models
   - Explicit model override (`opus`, `haiku`, `sonnet`) only when strongly justified
 
+- **File Output Conventions**
+  - Standardized output directory structure: `outputs/<project-name>/`
+  - Organized by type: `docs/`, `architecture/`, `database/`, `design/`, `writing/`
+  - Follows Anthropic's official Claude Code standards
+  - Alternative traditional structure supported: `./docs/`, `./database/`, etc.
+  - File naming conventions: kebab-case with optional version/date stamps
+  - Bilingual file naming support: `technical-analysis-en.md`, `technical-analysis-zh.md`
+
+- **Comprehensive Documentation Updates**
+  - Updated all 5 source skills with detailed output convention sections
+  - Synced 15 plugin skill files via `npm run sync`
+  - Updated all 6 workflow agents with output file locations
+  - Updated all 7 plugin READMEs with bilingual output location sections
+  - Updated architecture docs (Chinese & English)
+  - Updated user guides (Chinese & English)
+  - **Total: 37 files updated** for consistent output conventions across the entire marketplace
+
 ### Changed
 
 #### Documentation Updates
 - **`.claude/CLAUDE.md`**: Added comprehensive workflow guidelines (Slash Commands, Model Configuration, Planning Process)
 - **`.augment/rules/auggie-workflow.md`**: Synchronized with CLAUDE.md workflow rules for Augment Agent
-- **`docs/en/architecture.md`** & **`docs/zh/architecture.md`**: Added command usage patterns and model configuration strategy sections
+- **`docs/en/architecture.md`** & **`docs/zh/architecture.md`**: Added command usage patterns, model configuration strategy, and updated file output conventions
+- **`docs/en/user-guide.md`** & **`docs/zh/user-guide.md`**: Updated "Saving Output" sections with new output conventions
 - **`IMPLEMENTATION_SUMMARY.md`**: Updated architecture capabilities to reflect new development standards
+
+#### Skills & Agents
+- **All 5 Source Skills**: Added comprehensive "File Output Convention" sections with directory structure, naming conventions, and examples
+- **All 6 Workflow Agents**: Added "Output File Locations" sections with complete deliverable organization
+- **All 7 Plugin READMEs**: Added bilingual output location documentation for user discoverability
 
 ## [1.1.0] - 2025-12-08
 

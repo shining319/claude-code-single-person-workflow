@@ -52,3 +52,19 @@ Automatically activates when user says:
 - DrawDB DBML File
 - ER Diagram
 - Index Strategy Documentation
+
+## Output File Locations
+
+All database design files are saved to `outputs/<project-name>/database/`:
+
+```
+outputs/
+└── <project-name>/
+    └── database/
+        ├── schema-design.md
+        ├── schema.sql
+        ├── drawdb-schema.json
+        └── drawdb-schema.dbml
+```
+
+**Alternative:** Traditional project structure using `./database/` directory.

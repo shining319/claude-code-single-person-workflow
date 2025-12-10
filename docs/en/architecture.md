@@ -525,31 +525,91 @@ All skills follow similar patterns for predictable user experience.
 
 ## File Output Conventions
 
-### Directory Structure
+### Recommended Approach (Following Claude Code Official Standards)
+
+All generated files are saved to `outputs/<project-name>/` directory, organized by type:
+
+```
+outputs/
+└── <project-name>/              # Project name (e.g., task-management-app)
+    ├── docs/                    # Product documentation (product-manager)
+    │   ├── prd.md
+    │   ├── user-personas.md
+    │   └── requirements.md
+    ├── architecture/            # Technical architecture (solution-architect)
+    │   ├── system-architecture.md
+    │   ├── tech-stack.md
+    │   └── deployment-plan.md
+    ├── database/                # Database design (database-designer)
+    │   ├── schema-design.md
+    │   ├── schema.sql
+    │   ├── drawdb-schema.json
+    │   └── drawdb-schema.dbml
+    ├── design/                  # UI/UX design (ui-designer)
+    │   ├── ui-specification.md
+    │   ├── design-system.md
+    │   └── user-flows.md
+    └── writing/                 # Academic/technical writing (academic-writing)
+        ├── technical-analysis.md
+        └── project-documentation.md
+```
+
+**Example:**
+```
+outputs/
+├── task-management-app/
+│   ├── docs/
+│   │   └── prd.md
+│   ├── database/
+│   │   └── schema.sql
+│   └── design/
+│       └── ui-specification.md
+└── e-commerce-platform/
+    ├── docs/
+    │   └── prd-v1.0.md
+    └── architecture/
+        └── system-architecture.md
+```
+
+**Advantages:**
+- ✅ Good isolation: Each project has its own directory
+- ✅ Easy cleanup: Delete entire project directory
+- ✅ Automation-friendly: Standardized paths for scripting
+- ✅ Official standard: Consistent with Anthropic official examples
+
+### Alternative Approach (Traditional Project Structure)
+
+If your project has an existing directory structure, you can also use traditional paths:
 
 ```
 project-root/
-├─── database/
-│    ├─── schema-design.md
-│    ├─── schema.sql
-│    └─── er-diagram.json
-├─── design/
-│    ├─── ui-specification.md
-│    └─── wireframes/
-├─── docs/
-│    ├─── prd.md
-│    ├─── api-documentation.md
-│    └─── technical-specs.md
-└─── architecture/
-     ├─── system-architecture.md
-     └─── deployment-plan.md
+├── database/
+│   ├── schema-design.md
+│   ├── schema.sql
+│   └── er-diagram.json
+├── design/
+│   ├── ui-specification.md
+│   └── wireframes/
+├── docs/
+│   ├── prd.md
+│   ├── api-documentation.md
+│   └── technical-specs.md
+└── architecture/
+    ├── system-architecture.md
+    └── deployment-plan.md
 ```
+
+**Use Cases:**
+- Existing projects with established directory structure
+- Need to integrate with existing codebase
+- Team has established file organization standards
 
 ### File Naming Conventions
 
 - Use kebab-case: `user-authentication-flow.md`
-- Include timestamps for versions: `schema-design-2024-01-15.md`
+- Include version or date (optional): `schema-design-v1.0.md` or `prd-2024-12-10.md`
 - Use descriptive names: `e-commerce-database-schema.sql`
+- Specify language for bilingual docs: `technical-analysis-en.md`, `technical-analysis-zh.md`
 
 ## Extensibility
 

@@ -52,3 +52,20 @@ Automatically activates when user says:
 - MVP Scope Definition
 - Risk Assessment
 - Product Roadmap
+
+## Output File Locations
+
+All product documents are saved to `outputs/<project-name>/docs/`:
+
+```
+outputs/
+└── <project-name>/
+    └── docs/
+        ├── prd.md
+        ├── user-personas.md
+        ├── feature-specs.md
+        ├── user-stories.md
+        └── mvp-plan.md
+```
+
+**Alternative:** Traditional project structure using `./docs/` directory.

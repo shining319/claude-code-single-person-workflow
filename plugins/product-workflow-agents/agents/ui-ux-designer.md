@@ -52,3 +52,19 @@ Automatically activates when user says:
 - Design Specification Document
 - User Flow Diagrams
 - Design Tokens/Variables
+
+## Output File Locations
+
+All UI/UX design files are saved to `outputs/<project-name>/design/`:
+
+```
+outputs/
+└── <project-name>/
+    └── design/
+        ├── ui-specification.md
+        ├── design-system.md
+        ├── component-library.md
+        └── user-flows.md
+```
+
+**Alternative:** Traditional project structure using `./design/` directory.

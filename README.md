@@ -124,6 +124,39 @@ Use direct commands for guaranteed activation:
 | Academic Writing | `/academic-writing [topic]` | `/spw-writing [topic]` |
 | Full Workflow | `/build-dev-workflow [product description]` | — |
 
+### Output File Locations
+
+All generated files are organized in `outputs/<project-name>/` directory:
+
+```
+outputs/
+└── <project-name>/              # Your project name (e.g., my-saas-platform)
+    ├── docs/                    # Product documentation
+    ├── architecture/            # Technical architecture
+    ├── database/                # Database design
+    ├── design/                  # UI/UX design
+    └── writing/                 # Academic/technical writing
+```
+
+**Example:**
+```
+outputs/
+└── my-saas-platform/
+    ├── docs/prd.md
+    ├── database/schema.sql
+    └── design/ui-specification.md
+```
+
+**Advantages:**
+- ✅ Each project isolated in its own directory
+- ✅ Easy cleanup and management
+- ✅ Automation-friendly for scripting
+- ✅ Follows Claude Code official standards
+
+**Alternative:** Traditional structure using `./docs/`, `./database/`, `./design/`, `./architecture/` directories.
+
+For details, see [User Guide](docs/en/user-guide.md#saving-output).
+
 ### Documentation
 
 - [Installation Guide](docs/en/installation.md)
@@ -248,6 +281,39 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 | 架构设计 | `/solution-architect [系统]` | `/spw-arch [系统]` |
 | 学术写作 | `/academic-writing [主题]` | `/spw-writing [主题]` |
 | 完整工作流 | `/build-dev-workflow [产品描述]` | — |
+
+### 文件输出位置
+
+所有生成的文件组织在 `outputs/<project-name>/` 目录中：
+
+```
+outputs/
+└── <project-name>/              # 您的项目名称（如：my-saas-platform）
+    ├── docs/                    # 产品文档
+    ├── architecture/            # 技术架构
+    ├── database/                # 数据库设计
+    ├── design/                  # UI/UX 设计
+    └── writing/                 # 学术/技术写作
+```
+
+**示例：**
+```
+outputs/
+└── my-saas-platform/
+    ├── docs/prd.md
+    ├── database/schema.sql
+    └── design/ui-specification.md
+```
+
+**优势：**
+- ✅ 每个项目独立目录隔离
+- ✅ 易于清理和管理
+- ✅ 适合自动化脚本处理
+- ✅ 遵循 Claude Code 官方标准
+
+**替代方案：** 使用传统结构 `./docs/`、`./database/`、`./design/`、`./architecture/` 目录。
+
+详情请参阅[用户指南](docs/zh/user-guide.md#保存输出)。
 
 ### 文档
 

@@ -52,3 +52,19 @@ Automatically activates when user says:
 - Case Studies
 - Project Reports
 - User Guides
+
+## Output File Locations
+
+All technical writing outputs are saved to `outputs/<project-name>/writing/`:
+
+```
+outputs/
+└── <project-name>/
+    └── writing/
+        ├── technical-analysis.md
+        ├── research-review.md
+        ├── case-study.md
+        └── project-documentation.md
+```
+
+**Alternative:** Traditional project structure using `./docs/` directory.

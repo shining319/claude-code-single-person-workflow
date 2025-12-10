@@ -305,17 +305,77 @@ Ref fk_name {
 
 ### Step 5: Finalize and Deliver
 
-1. **Save all files** to `/mnt/user-data/outputs/`:
-   - `数据库设计文档.md` - Comprehensive design document
-   - `schema.sql` - Executable SQL script
-   - `drawdb-schema.json` - DrawDB JSON format
-   - `drawdb-schema.dbml` - DrawDB DBML format
+#### 5.1 Output Directory Convention
 
-2. **Provide summary** with:
-   - Brief overview of design decisions
-   - Number of tables created
-   - Key relationships
-   - How to import into DrawDB
+**Recommended Approach (Following Claude Code Official Standards):**
+
+Save all database design files to `outputs/<project-name>/database/`:
+
+```
+outputs/
+└── <project-name>/              # Project name (e.g., e-commerce-system)
+    └── database/
+        ├── schema-design.md     # Comprehensive design document
+        ├── schema.sql           # Executable SQL script
+        ├── drawdb-schema.json   # DrawDB JSON format
+        └── drawdb-schema.dbml   # DrawDB DBML format
+```
+
+**Example:**
+```
+outputs/
+├── e-commerce-system/
+│   └── database/
+│       ├── schema-design.md
+│       ├── schema.sql
+│       ├── drawdb-schema.json
+│       └── drawdb-schema.dbml
+└── task-management-app/
+    └── database/
+        ├── schema-design.md
+        └── schema.sql
+```
+
+**Alternative Approach (Traditional Project Structure):**
+
+If your project has an existing directory structure, you can also use:
+
+```
+project-root/
+└── database/
+    ├── schema-design.md
+    ├── schema.sql
+    ├── drawdb-schema.json
+    └── drawdb-schema.dbml
+```
+
+#### 5.2 Output File List
+
+**Required Outputs (4 files):**
+- `schema-design.md` - Comprehensive database design document (Chinese)
+- `schema.sql` - Executable SQL script
+- `drawdb-schema.json` - DrawDB JSON format
+- `drawdb-schema.dbml` - DrawDB DBML format
+
+**Optional Outputs:**
+- `er-diagram.png` - ER diagram visualization (if tools available)
+- `index-strategy.md` - Index strategy documentation
+
+#### 5.3 File Naming Convention
+
+- Use kebab-case: `user-authentication-schema.sql`
+- Include version/date when needed: `schema-v1.0.sql` or `schema-2024-12-10.sql`
+- Use descriptive names: `e-commerce-database-schema.sql`
+
+#### 5.4 Delivery Summary
+
+After generating all files, provide a summary with:
+- Brief overview of design decisions
+- Number of tables created
+- Key relationships and their rationale
+- How to import into DrawDB (JSON or DBML)
+- File save location confirmation
+- Next steps suggestions (e.g., review indexes, implement in development environment)
 
 ## Special Handling
 

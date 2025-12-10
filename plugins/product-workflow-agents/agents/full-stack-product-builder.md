@@ -57,5 +57,31 @@ Automatically activates when user says:
 - **From UI/UX Designer**: Design Specifications, User Flows, Component Library
 - **From Technical Writer**: Technical Documentation, User Guides, Project README
 
+## Output File Locations
+
+All deliverables are organized in a complete project structure under `outputs/<project-name>/`:
+
+```
+outputs/
+└── <project-name>/
+    ├── docs/                    # Product documentation
+    │   ├── prd.md
+    │   └── user-personas.md
+    ├── architecture/            # Technical architecture
+    │   ├── system-architecture.md
+    │   └── tech-stack.md
+    ├── database/                # Database design
+    │   ├── schema-design.md
+    │   ├── schema.sql
+    │   └── drawdb-schema.json
+    ├── design/                  # UI/UX design
+    │   ├── ui-specification.md
+    │   └── design-system.md
+    └── writing/                 # Technical documentation
+        └── project-documentation.md
+```
+
+**Alternative:** Traditional project structure using `./docs/`, `./database/`, `./design/`, `./architecture/` directories.
+
 ## Coordination Strategy
 This agent acts as an orchestrator, sequentially invoking specialized agents based on workflow phase. It ensures consistency across deliverables and manages handoffs between phases.

@@ -40,6 +40,27 @@ Use this plugin when you need to:
 - User Flow Diagrams
 - Design Specification Document
 
+### Output File Locations
+
+All UI/UX design files are saved to `outputs/<project-name>/design/`:
+
+```
+outputs/
+└── <project-name>/
+    └── design/
+        ├── ui-specification.md
+        ├── design-system.md
+        ├── component-library.md
+        └── user-flows.md
+```
+
+**File Naming Convention:**
+- Use kebab-case: `dashboard-design-spec.md`
+- Include version/date when needed: `ui-spec-v1.0.md`
+- Use descriptive names: `mobile-app-component-library.md`
+
+**Alternative:** Traditional project structure using `./design/` directory.
+
 ---
 
 ## 中文
@@ -79,6 +100,27 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 - 色彩和排版系统
 - 用户流程图
 - 设计规格文档
+
+### 文件输出位置
+
+所有 UI/UX 设计文件保存到 `outputs/<project-name>/design/` 目录：
+
+```
+outputs/
+└── <project-name>/
+    └── design/
+        ├── ui-specification.md
+        ├── design-system.md
+        ├── component-library.md
+        └── user-flows.md
+```
+
+**文件命名规范：**
+- 使用短横线命名法：`dashboard-design-spec.md`
+- 需要时包含版本/日期：`ui-spec-v1.0.md`
+- 使用描述性名称：`mobile-app-component-library.md`
+
+**替代方案：** 传统项目结构使用 `./design/` 目录。
 
 ## License
 

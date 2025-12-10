@@ -456,7 +456,29 @@ Skills activate automatically based on your request. You have three ways to acti
 
 ### Saving Output
 
-All generated files are saved to your project directory:
+**Recommended Approach (Following Claude Code Official Standards):**
+
+All generated files are saved to `outputs/<project-name>/` directory, organized by type:
+
+```
+outputs/
+└── <project-name>/              # Project name (e.g., task-management-app)
+    ├── docs/                    # Product documentation
+    ├── architecture/            # Technical architecture
+    ├── database/                # Database design
+    ├── design/                  # UI/UX design
+    └── writing/                 # Academic/technical writing
+```
+
+**Advantages:**
+- ✅ Each project has its own directory for good isolation
+- ✅ Easy to cleanup and manage
+- ✅ Automation-friendly for scripting
+- ✅ Follows Anthropic official standards
+
+**Alternative Approach (Traditional Project Structure):**
+
+If your project has an existing directory structure, you can also use:
 - Database designs: `./database/`
 - Design specs: `./design/`
 - Documentation: `./docs/`

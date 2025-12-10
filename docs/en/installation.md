@@ -215,6 +215,30 @@ If you encounter issues not covered here:
 2. Review the [Architecture](architecture.md) documentation
 3. Open an issue on the [GitHub repository](https://github.com/shining319/claude-code-single-person-workflow/issues)
 
+## Understanding Output Locations
+
+After installation, all generated files will be saved to:
+
+```
+outputs/<project-name>/
+├── docs/                    # Product documentation
+├── architecture/            # Technical architecture
+├── database/                # Database design
+├── design/                  # UI/UX design
+└── writing/                 # Academic/technical writing
+```
+
+**Example:**
+```
+outputs/
+└── my-saas-platform/
+    ├── docs/prd.md
+    ├── database/schema.sql
+    └── design/ui-specification.md
+```
+
+This structure follows Claude Code official standards and keeps your projects organized. For details, see the [User Guide](user-guide.md#saving-output).
+
 ## Next Steps
 
 Once installed, proceed to the [User Guide](user-guide.md) to learn how to use the plugins effectively.

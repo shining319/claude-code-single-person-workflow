@@ -41,6 +41,27 @@ Use this plugin when you need to:
 - Cost Estimates
 - Architecture Decision Records (ADRs)
 
+### Output File Locations
+
+All architecture documents are saved to `outputs/<project-name>/architecture/`:
+
+```
+outputs/
+└── <project-name>/
+    └── architecture/
+        ├── system-architecture.md
+        ├── tech-stack.md
+        ├── deployment-plan.md
+        └── architecture-decisions.md
+```
+
+**File Naming Convention:**
+- Use kebab-case: `microservices-architecture.md`
+- Include version/date when needed: `system-architecture-v1.0.md`
+- Use descriptive names: `e-commerce-deployment-plan.md`
+
+**Alternative:** Traditional project structure using `./architecture/` directory.
+
 ---
 
 ## 中文
@@ -81,6 +102,27 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 - 云平台对比
 - 成本估算
 - 架构决策记录（ADRs）
+
+### 文件输出位置
+
+所有架构文档保存到 `outputs/<project-name>/architecture/` 目录：
+
+```
+outputs/
+└── <project-name>/
+    └── architecture/
+        ├── system-architecture.md
+        ├── tech-stack.md
+        ├── deployment-plan.md
+        └── architecture-decisions.md
+```
+
+**文件命名规范：**
+- 使用短横线命名法：`microservices-architecture.md`
+- 需要时包含版本/日期：`system-architecture-v1.0.md`
+- 使用描述性名称：`e-commerce-deployment-plan.md`
+
+**替代方案：** 传统项目结构使用 `./architecture/` 目录。
 
 ## License
 

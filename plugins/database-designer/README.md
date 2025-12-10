@@ -37,6 +37,27 @@ Use this plugin when you need to:
 3. **DrawDB JSON**: Import into DrawDB for visual editing
 4. **DrawDB DBML**: Alternative DrawDB format
 
+### Output File Locations
+
+All database design files are saved to `outputs/<project-name>/database/`:
+
+```
+outputs/
+└── <project-name>/
+    └── database/
+        ├── schema-design.md
+        ├── schema.sql
+        ├── drawdb-schema.json
+        └── drawdb-schema.dbml
+```
+
+**File Naming Convention:**
+- Use kebab-case: `e-commerce-schema.sql`
+- Include version/date when needed: `schema-v1.0.sql`
+- Use descriptive names: `user-authentication-schema.sql`
+
+**Alternative:** Traditional project structure using `./database/` directory.
+
 ---
 
 ## 中文
@@ -73,6 +94,27 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 2. **SQL脚本**: 可执行的数据库创建脚本
 3. **DrawDB JSON**: 导入DrawDB进行可视化编辑
 4. **DrawDB DBML**: DrawDB替代格式
+
+### 文件输出位置
+
+所有数据库设计文件保存到 `outputs/<project-name>/database/` 目录：
+
+```
+outputs/
+└── <project-name>/
+    └── database/
+        ├── schema-design.md
+        ├── schema.sql
+        ├── drawdb-schema.json
+        └── drawdb-schema.dbml
+```
+
+**文件命名规范：**
+- 使用短横线命名法：`e-commerce-schema.sql`
+- 需要时包含版本/日期：`schema-v1.0.sql`
+- 使用描述性名称：`user-authentication-schema.sql`
+
+**替代方案：** 传统项目结构使用 `./database/` 目录。
 
 ## License
 

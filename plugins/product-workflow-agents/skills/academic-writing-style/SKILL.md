@@ -145,6 +145,82 @@ Before finalizing, verify:
 - Reflect on lessons learned (appropriate place for first-person)
 - Balance description with analysis
 
+## File Output Convention
+
+### Output Directory Convention
+
+**Recommended Approach (Following Claude Code Official Standards):**
+
+Save all academic writing outputs to `outputs/<project-name>/writing/`:
+
+```
+outputs/
+└── <project-name>/              # Project name (e.g., cloud-computing-analysis)
+    └── writing/
+        ├── technical-analysis.md    # Technical analysis report
+        ├── research-review.md       # Research review document
+        ├── case-study.md            # Case study report
+        └── project-documentation.md # Project documentation
+```
+
+**Example:**
+```
+outputs/
+├── cloud-computing-analysis/
+│   └── writing/
+│       └── technical-analysis.md
+├── ai-ethics-research/
+│   └── writing/
+│       └── research-review.md
+└── database-optimization-case/
+    └── writing/
+        └── case-study.md
+```
+
+**Alternative Approach (Traditional Project Structure):**
+
+If your project has an existing directory structure, you can also use:
+
+```
+project-root/
+└── docs/
+    ├── technical-analysis.md
+    ├── research-review.md
+    └── case-study.md
+```
+
+### Output File List
+
+Generate documents based on assignment type:
+
+**Technical Analysis:**
+- `technical-analysis.md` - Technical analysis report
+
+**Research Review:**
+- `research-review.md` - Research review document
+
+**Case Study:**
+- `case-study.md` - Case study report
+
+**Project Documentation:**
+- `project-documentation.md` - Project documentation
+
+### File Naming Convention
+
+- Use kebab-case: `cloud-computing-technical-analysis.md`
+- Include version/date when needed: `research-review-v1.0.md`
+- Use descriptive names: `database-optimization-case-study.md`
+- Specify language if bilingual: `technical-analysis-en.md`, `technical-analysis-zh.md`
+
+### Delivery Summary
+
+After generating the document, provide a brief summary:
+- Document type and target language
+- Word count and chapter structure
+- Key topics covered
+- Writing style characteristics applied
+- File save location confirmation
+
 ## References
 
 Detailed examples and guidelines available in:

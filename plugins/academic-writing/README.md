@@ -38,6 +38,26 @@ User: Help me write a technical analysis report about cloud computing adoption
 Assistant: [Activates academic-writing-style skill and produces natural, flowing academic content]
 ```
 
+### Output File Locations
+
+All academic writing outputs are saved to `outputs/<project-name>/writing/`:
+
+```
+outputs/
+└── <project-name>/
+    └── writing/
+        ├── technical-analysis.md
+        ├── research-review.md
+        └── case-study.md
+```
+
+**File Naming Convention:**
+- Use kebab-case: `cloud-computing-analysis.md`
+- Include version/date when needed: `research-review-v1.0.md`
+- Specify language if bilingual: `technical-analysis-en.md`
+
+**Alternative:** Traditional project structure using `./docs/` directory.
+
 ---
 
 ## 中文
@@ -75,6 +95,26 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 用户: 帮我写一篇关于云计算采用的技术分析报告
 助手: [激活 academic-writing-style skill，生成自然流畅的学术内容]
 ```
+
+### 文件输出位置
+
+所有学术写作输出保存到 `outputs/<project-name>/writing/` 目录：
+
+```
+outputs/
+└── <project-name>/
+    └── writing/
+        ├── technical-analysis.md
+        ├── research-review.md
+        └── case-study.md
+```
+
+**文件命名规范：**
+- 使用短横线命名法：`cloud-computing-analysis.md`
+- 需要时包含版本/日期：`research-review-v1.0.md`
+- 双语文档指定语言：`technical-analysis-zh.md`
+
+**替代方案：** 传统项目结构使用 `./docs/` 目录。
 
 ## License
 

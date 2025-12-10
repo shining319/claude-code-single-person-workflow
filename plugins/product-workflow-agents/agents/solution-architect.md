@@ -52,3 +52,19 @@ Automatically activates when user says:
 - Cloud Platform Comparison
 - Cost Estimates
 - Architecture Decision Records (ADRs)
+
+## Output File Locations
+
+All architecture documents are saved to `outputs/<project-name>/architecture/`:
+
+```
+outputs/
+└── <project-name>/
+    └── architecture/
+        ├── system-architecture.md
+        ├── tech-stack.md
+        ├── deployment-plan.md
+        └── architecture-decisions.md
+```
+
+**Alternative:** Traditional project structure using `./architecture/` directory.

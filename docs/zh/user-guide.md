@@ -456,7 +456,29 @@
 
 ### 保存输出
 
-所有生成的文件都保存到您的项目目录：
+**推荐方案（遵循 Claude Code 官方规范）：**
+
+所有生成的文件保存到 `outputs/<project-name>/` 目录，按类型组织：
+
+```
+outputs/
+└── <project-name>/              # 项目名称（如：task-management-app）
+    ├── docs/                    # 产品文档
+    ├── architecture/            # 技术架构
+    ├── database/                # 数据库设计
+    ├── design/                  # UI/UX 设计
+    └── writing/                 # 学术/技术写作
+```
+
+**优势：**
+- ✅ 每个项目独立目录，隔离性好
+- ✅ 易于清理和管理
+- ✅ 适合自动化脚本处理
+- ✅ 遵循 Anthropic 官方规范
+
+**替代方案（传统项目结构）：**
+
+如果您的项目已有固定目录结构，也可以使用：
 - 数据库设计：`./database/`
 - 设计规范：`./design/`
 - 文档：`./docs/`

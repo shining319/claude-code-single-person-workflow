@@ -169,7 +169,69 @@ Provide: topology diagram, environment division (dev/staging/prod), platform sel
 
 ## Phase 5: Documentation Output
 
-### Document Structure
+### 5.1 Output Directory Convention
+
+**Recommended Approach (Following Claude Code Official Standards):**
+
+Save all architecture documents to `outputs/<project-name>/architecture/`:
+
+```
+outputs/
+└── <project-name>/              # Project name (e.g., e-commerce-platform)
+    └── architecture/
+        ├── system-architecture.md    # Complete technical architecture design
+        ├── tech-stack.md             # Technology stack selection and comparison
+        ├── deployment-plan.md        # Deployment architecture and strategy
+        ├── architecture-decisions.md # Architecture Decision Records (ADRs)
+        └── cost-estimate.md          # Cost estimation report
+```
+
+**Example:**
+```
+outputs/
+├── e-commerce-platform/
+│   └── architecture/
+│       ├── system-architecture.md
+│       ├── tech-stack.md
+│       └── deployment-plan.md
+└── task-management-app/
+    └── architecture/
+        ├── system-architecture.md
+        └── cost-estimate.md
+```
+
+**Alternative Approach (Traditional Project Structure):**
+
+If your project has an existing directory structure, you can also use:
+
+```
+project-root/
+└── architecture/
+    ├── system-architecture.md
+    ├── tech-stack.md
+    └── deployment-plan.md
+```
+
+### 5.2 Output File List
+
+**Architecture Design Documents:**
+- `system-architecture.md` - Complete technical architecture design document
+
+**Technology Selection Documents:**
+- `tech-stack.md` - Technology stack selection and comparison
+- `architecture-decisions.md` - Architecture Decision Records (ADRs)
+
+**Deployment Planning Documents:**
+- `deployment-plan.md` - Deployment architecture and strategy
+- `cost-estimate.md` - Cost estimation report
+
+### 5.3 File Naming Convention
+
+- Use kebab-case: `microservices-architecture.md`
+- Include version/date when needed: `system-architecture-v1.0.md`
+- Use descriptive names: `e-commerce-deployment-plan.md`
+
+### 5.4 Document Structure
 
 ```markdown
 # [Project] Technical Architecture Design
@@ -179,7 +241,7 @@ Business goals, core features, key challenges
 
 ## 2. Requirements Analysis
 ### Functional Requirements
-### Non-Functional Requirements  
+### Non-Functional Requirements
 ### Constraints
 
 ## 3. Architecture Design
@@ -211,6 +273,18 @@ Technical/security/performance risks and mitigations
 Phase division, milestones
 
 ## 9. Future Evolution
+```
+
+### 5.5 Delivery Summary
+
+After generating architecture documents, provide a summary with:
+- Document type and purpose
+- Key architecture decisions and rationale
+- Technology stack overview
+- Estimated costs (development and operational)
+- Critical risks and mitigation strategies
+- Next steps suggestions (e.g., database design, detailed API specs)
+- File save location confirmation
 ```
 
 ### Use Mermaid for Architecture Diagrams

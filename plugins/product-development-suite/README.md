@@ -46,6 +46,27 @@ With this suite, you can:
 - ✅ Design UI interfaces with detailed specifications
 - ✅ Write professional technical documentation
 
+### Output File Locations
+
+All generated files are organized in `outputs/<project-name>/` with subdirectories by type:
+
+```
+outputs/
+└── <project-name>/
+    ├── docs/                    # Product documentation (product-manager)
+    ├── architecture/            # Technical architecture (solution-architect)
+    ├── database/                # Database design (database-designer)
+    ├── design/                  # UI/UX design (ui-designer)
+    └── writing/                 # Academic/technical writing (academic-writing)
+```
+
+**File Naming Convention:**
+- Use kebab-case for all files
+- Include version/date when needed
+- Use descriptive names
+
+**Alternative:** Traditional project structure using `./docs/`, `./database/`, `./design/`, `./architecture/` directories.
+
 ---
 
 ## 中文
@@ -91,6 +112,27 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 - ✅ 创建完整的数据库架构和ER图
 - ✅ 设计带详细规格的UI界面
 - ✅ 编写专业的技术文档
+
+### 文件输出位置
+
+所有生成的文件按类型组织在 `outputs/<project-name>/` 目录下：
+
+```
+outputs/
+└── <project-name>/
+    ├── docs/                    # 产品文档（product-manager）
+    ├── architecture/            # 技术架构（solution-architect）
+    ├── database/                # 数据库设计（database-designer）
+    ├── design/                  # UI/UX 设计（ui-designer）
+    └── writing/                 # 学术/技术写作（academic-writing）
+```
+
+**文件命名规范：**
+- 所有文件使用短横线命名法
+- 需要时包含版本/日期
+- 使用描述性名称
+
+**替代方案：** 传统项目结构使用 `./docs/`、`./database/`、`./design/`、`./architecture/` 目录。
 
 ## License
 

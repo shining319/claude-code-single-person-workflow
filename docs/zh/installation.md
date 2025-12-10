@@ -215,6 +215,30 @@ claude plugin uninstall github:shining319/claude-code-single-person-workflow
 2. 查阅[架构文档](architecture.md)了解插件结构
 3. 在 [GitHub 仓库](https://github.com/shining319/claude-code-single-person-workflow/issues)中提交问题
 
+## 了解输出位置
+
+安装后，所有生成的文件将保存到：
+
+```
+outputs/<project-name>/
+├── docs/                    # 产品文档
+├── architecture/            # 技术架构
+├── database/                # 数据库设计
+├── design/                  # UI/UX 设计
+└── writing/                 # 学术/技术写作
+```
+
+**示例：**
+```
+outputs/
+└── my-saas-platform/
+    ├── docs/prd.md
+    ├── database/schema.sql
+    └── design/ui-specification.md
+```
+
+此结构遵循 Claude Code 官方标准，让您的项目保持良好组织。详情请参阅[用户指南](user-guide.md#保存输出)。
+
 ## 下一步
 
 安装完成后，请查看[用户指南](user-guide.md)学习如何有效使用插件。

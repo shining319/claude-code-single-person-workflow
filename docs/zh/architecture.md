@@ -525,31 +525,91 @@ model: opus  # ❌ 不必要 - haiku 或 inherit 就可以
 
 ## 文件输出约定
 
-### 目录结构
+### 推荐方案（遵循 Claude Code 官方规范）
+
+所有生成的文件保存到 `outputs/<project-name>/` 目录，按类型组织：
+
+```
+outputs/
+└── <project-name>/              # 项目名称（如：task-management-app）
+    ├── docs/                    # 产品文档（product-manager）
+    │   ├── prd.md
+    │   ├── user-personas.md
+    │   └── requirements.md
+    ├── architecture/            # 技术架构（solution-architect）
+    │   ├── system-architecture.md
+    │   ├── tech-stack.md
+    │   └── deployment-plan.md
+    ├── database/                # 数据库设计（database-designer）
+    │   ├── schema-design.md
+    │   ├── schema.sql
+    │   ├── drawdb-schema.json
+    │   └── drawdb-schema.dbml
+    ├── design/                  # UI/UX 设计（ui-designer）
+    │   ├── ui-specification.md
+    │   ├── design-system.md
+    │   └── user-flows.md
+    └── writing/                 # 学术/技术写作（academic-writing）
+        ├── technical-analysis.md
+        └── project-documentation.md
+```
+
+**示例：**
+```
+outputs/
+├── task-management-app/
+│   ├── docs/
+│   │   └── prd.md
+│   ├── database/
+│   │   └── schema.sql
+│   └── design/
+│       └── ui-specification.md
+└── e-commerce-platform/
+    ├── docs/
+    │   └── prd-v1.0.md
+    └── architecture/
+        └── system-architecture.md
+```
+
+**优势：**
+- ✅ 隔离性好：每个项目独立目录
+- ✅ 易于清理：删除整个项目目录即可
+- ✅ 适合自动化：标准化路径便于脚本处理
+- ✅ 遵循官方规范：与 Anthropic 官方示例一致
+
+### 替代方案（传统项目结构）
+
+如果你的项目已有固定目录结构，也可以使用传统路径：
 
 ```
 project-root/
-├─── database/
-│    ├─── schema-design.md
-│    ├─── schema.sql
-│    └─── er-diagram.json
-├─── design/
-│    ├─── ui-specification.md
-│    └─── wireframes/
-├─── docs/
-│    ├─── prd.md
-│    ├─── api-documentation.md
-│    └─── technical-specs.md
-└─── architecture/
-     ├─── system-architecture.md
-     └─── deployment-plan.md
+├── database/
+│   ├── schema-design.md
+│   ├── schema.sql
+│   └── er-diagram.json
+├── design/
+│   ├── ui-specification.md
+│   └── wireframes/
+├── docs/
+│   ├── prd.md
+│   ├── api-documentation.md
+│   └── technical-specs.md
+└── architecture/
+    ├── system-architecture.md
+    └── deployment-plan.md
 ```
+
+**适用场景：**
+- 现有项目已有固定目录结构
+- 需要与现有代码库集成
+- 团队已有既定的文件组织规范
 
 ### 文件命名约定
 
-- 使用短横线命名法：`user-authentication-flow.md`
-- 包含版本时间戳：`schema-design-2024-01-15.md`
+- 使用短横线命名法（kebab-case）：`user-authentication-flow.md`
+- 包含版本或日期（可选）：`schema-design-v1.0.md` 或 `prd-2024-12-10.md`
 - 使用描述性名称：`e-commerce-database-schema.sql`
+- 双语文档指定语言：`technical-analysis-zh.md`、`technical-analysis-en.md`
 
 ## 可扩展性
 
