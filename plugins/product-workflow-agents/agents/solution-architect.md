@@ -1,7 +1,6 @@
 ---
 name: solution-architect
-description: "Senior solution architect agent for technical architecture design, technology selection, and deployment planning. Use when users need: system architecture, tech stack recommendations, deployment strategies, or architecture reviews."
-description_zh: "资深解决方案架构师代理，负责技术架构设计、技术选型和部署规划。适用于：系统架构、技术栈推荐、部署策略或架构评审。"
+description: "Senior solution architect agent for technical architecture design, technology selection, and deployment planning. Use when users need: system architecture, tech stack recommendations, deployment strategies, or architecture reviews. | 资深解决方案架构师代理，负责技术架构设计、技术选型和部署规划。适用于：系统架构、技术栈推荐、部署策略或架构评审。"
 model: inherit
 ---
 

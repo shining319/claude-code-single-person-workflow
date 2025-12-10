@@ -265,6 +265,39 @@ triggers:
 - 保持命令定义简洁，专注于技能激活
 - 使用 `$ARGUMENTS` 变量将用户输入传递给技能
 
+### 代理配置
+
+工作流代理编排多个技能来完成复杂任务。每个代理在一个带有 YAML frontmatter 的 markdown 文件中定义。
+
+#### 代理 Frontmatter 字段
+
+**支持的字段：**
+- `name`（必需）：使用小写字母和连字符的唯一标识符
+- `description`（必需）：代理用途的自然语言描述
+  - **支持双语格式**：`"English description | 中文描述"`
+  - 这种格式确保英文和中文用户都能发现代理
+- `model`（可选）：模型配置（通常为 `inherit`）
+- `tools`（可选）：代理可以使用的特定工具的逗号分隔列表
+- `permissionMode`（可选）：代理的权限模式
+- `skills`（可选）：要自动加载的技能名称的逗号分隔列表
+
+#### 重要说明
+
+- 代理 frontmatter **不支持** `description_zh`（不是 Claude Code 官方规范的一部分）
+- 请在 `description` 字段中使用双语格式：`"English | 中文"`
+- 这与技能描述格式保持一致，确保整个市场的一致性
+- 本市场中的所有代理都使用 `model: inherit` 以保持灵活性
+
+#### 代理 Frontmatter 示例
+
+```yaml
+---
+name: product-manager
+description: "Senior product manager agent specializing in requirements analysis, user research, and PRD creation. Use when users need: product strategy, user personas, feature planning, MVP definition, or PRD documentation. | 资深产品经理代理，专注于需求分析、用户研究和PRD创建。适用于：产品策略、用户画像、功能规划、MVP定义或PRD文档。"
+model: inherit
+---
+```
+
 #### 命令文件示例
 
 ```markdown

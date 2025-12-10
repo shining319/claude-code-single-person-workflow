@@ -1,6 +1,6 @@
 ---
 name: academic-writing-style
-description: Personalized academic writing assistant for Chinese and English university assignments. Use when the user requests help writing or revising academic reports, project documentation, technical analyses, research reviews, or case studies. The skill produces natural, flowing prose that avoids typical AI markers like bullet points, rigid structures, and formulaic transitions. Suitable for assignments requiring professional yet accessible language with clear chapter divisions and moderate personal voice.
+description: "Personalized academic writing assistant for university assignments in Chinese and English. Use when users need help writing/revising academic reports, project docs, technical analyses, research reviews, or case studies. Produces natural prose avoiding AI markers. Triggers: academic writing, assignment, report, technical analysis, research review, case study. | 个性化学术写作助手，适用于中英文大学作业。触发词：学术写作、作业、报告、技术分析、研究综述、案例研究、项目文档。"
 ---
 
 # Academic Writing Style

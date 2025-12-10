@@ -55,8 +55,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`IMPLEMENTATION_SUMMARY.md`**: Updated architecture capabilities to reflect new development standards
 
 #### Skills & Agents
-- **All 5 Source Skills**: Added comprehensive "File Output Convention" sections with directory structure, naming conventions, and examples
-- **All 6 Workflow Agents**: Added "Output File Locations" sections with complete deliverable organization
+- **All 5 Source Skills**:
+  - Added comprehensive "File Output Convention" sections with directory structure, naming conventions, and examples
+  - Updated `description` to bilingual format (English | Chinese) for better skill discovery and Claude's autonomous skill invocation
+- **All 6 Workflow Agents**:
+  - Added "Output File Locations" sections with complete deliverable organization
+  - **Removed `description_zh` field** (non-compliant with Claude Code official specification)
+  - **Merged Chinese content into `description` field** using bilingual format (English | Chinese)
+  - Now fully compliant with Claude Code agent frontmatter specification
 - **All 7 Plugin READMEs**: Added bilingual output location documentation for user discoverability
 
 ## [1.1.0] - 2025-12-08

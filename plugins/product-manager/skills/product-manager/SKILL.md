@@ -1,6 +1,6 @@
 ---
 name: product-manager
-description: 资深产品经理角色，负责从需求分析到产品设计的全过程。当用户需要以下帮助时使用此 skill：(1) 分析需求背景并梳理产品方向，(2) 构建用户画像和场景分析，(3) 设计产品功能和交互流程，(4) 撰写PRD或产品文档，(5) 进行可行性评估和风险分析。触发词包括：产品设计、需求分析、用户画像、PRD、功能规划、MVP、用户故事、产品方案等。
+description: "Senior product manager for end-to-end product development from requirements to design. Use when users need: (1) Requirements analysis and product direction, (2) User personas and scenario analysis, (3) Feature and interaction design, (4) PRD writing, (5) Feasibility assessment. Triggers: product design, requirements, user persona, PRD, feature planning, MVP, user story. | 资深产品经理，负责需求分析到产品设计全流程。触发词：产品设计、需求分析、用户画像、PRD、功能规划、MVP、用户故事、产品方案。"
 ---
 
 # 产品经理 Skill

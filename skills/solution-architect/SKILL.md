@@ -1,6 +1,6 @@
 ---
 name: solution-architect
-description: "Transform product requirements into executable technical architecture designs. Use when users request: (1) Technical architecture design or system architecture, (2) Technology stack selection or technical solution proposals, (3) Architecture based on PRD documents, (4) Deployment strategy or infrastructure planning, (5) Architecture review or optimization recommendations. Provides complete workflows from requirements analysis through deployment planning, with ready-to-use tech stack templates and cloud deployment comparisons."
+description: "Transform product requirements into executable technical architecture. Use when users request: (1) Technical/system architecture design, (2) Tech stack selection, (3) Architecture from PRD, (4) Deployment strategy, (5) Architecture review. Provides workflows from requirements to deployment with tech stack templates. Triggers: architecture, tech stack, system design, deployment, infrastructure. | 将产品需求转化为技术架构。触发词：架构设计、技术架构、系统架构、技术选型、部署方案、基础设施。"
 ---
 
 # Solution Architect

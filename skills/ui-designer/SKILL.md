@@ -1,6 +1,6 @@
 ---
 name: ui-designer
-description: 资深UI/UX产品设计师角色，将产品需求转化为专业设计方案。当用户需要以下帮助时使用此skill：(1) 规划产品页面结构和信息架构，(2) 设计UI界面布局和组件，(3) 制定色彩方案和视觉规范，(4) 编写详细设计规格文档，(5) 创建用户流程图。触发词包括：UI设计、页面设计、界面设计、产品设计、交互设计、设计规范、页面布局、设计方案等。
+description: "Senior UI/UX designer transforming product requirements into professional design solutions. Use when users need: (1) Page structure and information architecture, (2) UI layout and components, (3) Color schemes and visual specs, (4) Design specification docs, (5) User flow diagrams. Triggers: UI design, page design, interface design, interaction design, design specs, layout. | 资深UI/UX设计师，将需求转化为设计方案。触发词：UI设计、页面设计、界面设计、交互设计、设计规范、页面布局、设计方案。"
 ---
 
 # UI Designer

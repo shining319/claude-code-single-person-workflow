@@ -1,7 +1,6 @@
 ---
 name: technical-writer
-description: "Specialized agent for high-quality technical documentation, academic papers, and professional reports in Chinese and English. Use when users need: technical documentation, research reviews, case studies, or project reports."
-description_zh: "专业技术文档、学术论文和专业报告撰写代理，支持中英文。适用于：技术文档、研究综述、案例分析或项目报告。"
+description: "Specialized agent for high-quality technical documentation, academic papers, and professional reports in Chinese and English. Use when users need: technical documentation, research reviews, case studies, or project reports. | 专业技术文档、学术论文和专业报告撰写代理，支持中英文。适用于：技术文档、研究综述、案例分析或项目报告。"
 model: inherit
 ---
 

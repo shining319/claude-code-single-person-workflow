@@ -265,6 +265,39 @@ Commands are defined in `plugins/*/commands/*.md` files with YAML frontmatter.
 - Keep command definitions minimal and focused on skill activation
 - Use `$ARGUMENTS` variable to pass user input to skills
 
+### Agent Configuration
+
+Workflow agents orchestrate multiple skills to accomplish complex tasks. Each agent is defined in a markdown file with YAML frontmatter.
+
+#### Agent Frontmatter Fields
+
+**Supported fields:**
+- `name` (required): Unique identifier using lowercase letters and hyphens
+- `description` (required): Natural language description of the agent's purpose
+  - **Supports bilingual format**: `"English description | 中文描述"`
+  - This format ensures both English and Chinese users can discover the agent
+- `model` (optional): Model configuration (typically `inherit`)
+- `tools` (optional): Comma-separated list of specific tools the agent can use
+- `permissionMode` (optional): Permission mode for the agent
+- `skills` (optional): Comma-separated list of skill names to auto-load
+
+#### Important Notes
+
+- **`description_zh` is NOT supported** in agent frontmatter (not part of Claude Code official specification)
+- Use bilingual format in the `description` field instead: `"English | 中文"`
+- This matches the skill description format for consistency across the marketplace
+- All agents in this marketplace use `model: inherit` for flexibility
+
+#### Example Agent Frontmatter
+
+```yaml
+---
+name: product-manager
+description: "Senior product manager agent specializing in requirements analysis, user research, and PRD creation. Use when users need: product strategy, user personas, feature planning, MVP definition, or PRD documentation. | 资深产品经理代理，专注于需求分析、用户研究和PRD创建。适用于：产品策略、用户画像、功能规划、MVP定义或PRD文档。"
+model: inherit
+---
+```
+
 #### Example Command File
 
 ```markdown

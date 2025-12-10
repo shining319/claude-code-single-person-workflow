@@ -1,7 +1,6 @@
 ---
 name: ui-ux-designer
-description: "Complete UI/UX design agent creating detailed interface specifications, design systems, and user flows. Use when users need: UI design, page layouts, design specifications, or user flow diagrams."
-description_zh: "完整的UI/UX设计代理，创建详细的界面规格、设计系统和用户流程。适用于：UI设计、页面布局、设计规格或用户流程图。"
+description: "Complete UI/UX design agent creating detailed interface specifications, design systems, and user flows. Use when users need: UI design, page layouts, design specifications, or user flow diagrams. | 完整的UI/UX设计代理，创建详细的界面规格、设计系统和用户流程。适用于：UI设计、页面布局、设计规格或用户流程图。"
 model: inherit
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: database-designer
-description: Comprehensive database design tool that creates complete database schemas with tables, fields, indexes, and ER diagrams. Use when users request database design for any system or application. Generates detailed design documents in Markdown format, executable SQL scripts, and DrawDB-compatible JSON/DBML files for visual ER diagram creation. Supports MySQL (default), PostgreSQL, SQL Server, and other databases. Follows best practices including logical relationships without physical foreign keys, realistic field sizes, optimized indexes, and mandatory comments.
+description: "Comprehensive database design tool creating complete schemas with tables, fields, indexes, and ER diagrams. Use when users request database design for any system. Generates Markdown docs, SQL scripts, and DrawDB-compatible JSON/DBML files. Supports MySQL, PostgreSQL, SQL Server. Triggers: database design, schema, ER diagram, SQL, data model. | 全面的数据库设计工具，创建完整的数据库架构。触发词：数据库设计、数据库架构、ER图、SQL、数据模型、表设计。"
 ---
 
 # Database Designer
