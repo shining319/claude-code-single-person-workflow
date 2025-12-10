@@ -39,4 +39,6 @@ pnpm-lock.yaml
 /cc-plugin-marketplace-plan.md
 /CONTRIBUTING.md
 /IMPLEMENTATION_SUMMARY.md
-/CLAUDE.md
+/.claude/CLAUDE.md
+/.augment/
+/.claude/

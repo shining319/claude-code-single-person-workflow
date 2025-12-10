@@ -204,6 +204,205 @@ You are a database design expert...
 [Detailed instructions follow]
 ```
 
+## Command Usage Patterns
+
+### Overview
+
+This marketplace follows standardized command naming conventions to ensure consistency and discoverability across all plugins.
+
+### Naming Conventions
+
+#### 1. Individual Skill Plugins
+
+**Pattern:** `/plugin-name`
+
+**Examples:**
+- `/database-designer` - Database schema design
+- `/product-manager` - Product requirements and PRD
+- `/ui-designer` - UI/UX design specifications
+- `/solution-architect` - Technical architecture design
+- `/academic-writing` - Academic writing assistance
+
+**Usage:** Direct activation of a single skill
+
+#### 2. Suite Plugins
+
+**Pattern:** `/spw-*` (spw = single-person workflow)
+
+**Examples:**
+- `/spw-db` - Database design (from product-development-suite)
+- `/spw-prd` - Product requirements (from product-development-suite)
+- `/spw-ui` - UI design (from product-development-suite)
+- `/spw-arch` - Architecture design (from product-development-suite)
+- `/spw-writing` - Academic writing (from product-development-suite)
+
+**Usage:** Quick access to skills within the product-development-suite package
+
+#### 3. Workflow Plugins
+
+**Pattern:** Descriptive workflow names
+
+**Example:**
+- `/build-dev-workflow` - Complete product development workflow
+
+**Usage:** Orchestrate multiple skills in a complete end-to-end workflow
+
+### Command Frontmatter Specifications
+
+Commands are defined in `plugins/*/commands/*.md` files with YAML frontmatter.
+
+#### Allowed Fields
+
+- `description` - English description of the command
+- `argument-hint` - Hint text for command arguments (shown in CLI)
+- `allowed-tools` - Tools the command can use (optional)
+- `model` - Model configuration (typically `inherit`)
+
+#### Important Notes
+
+- **`description_zh` is NOT supported** in command frontmatter
+- Chinese descriptions should be maintained in README files and documentation
+- Keep command definitions minimal and focused on skill activation
+- Use `$ARGUMENTS` variable to pass user input to skills
+
+#### Example Command File
+
+```markdown
+---
+description: "Design database schema with ER diagrams"
+argument-hint: "[requirements]"
+model: inherit
+---
+
+Activate the database-designer skill with the provided requirements: $ARGUMENTS
+```
+
+### Command Discovery
+
+Users can discover available commands through:
+1. **Auto-completion** in Claude Code CLI
+2. **Documentation** in README files and user guides
+3. **Natural language** - Commands are also discoverable through conversational requests
+
+## Model Configuration Strategy
+
+### Overview
+
+This marketplace uses an inheritance-based model configuration strategy to maintain flexibility while providing sensible defaults.
+
+### Configuration Hierarchy
+
+#### 1. Skills (No model field)
+
+**Behavior:**
+- Skills do **not** specify a `model` field in their frontmatter
+- They inherit the model from their invocation context
+- This allows the same skill to run with different models based on how it's invoked
+
+**Rationale:**
+- Maximum flexibility for users
+- Skills remain model-agnostic
+- Users can choose the best model for their use case
+
+#### 2. Agents (Default: `model: inherit`)
+
+**Behavior:**
+- Workflow agents typically use `model: inherit` in their frontmatter
+- This allows the agent to use the model specified by the user or system
+- Override only when a specific model is required for the agent's task
+
+**Example:**
+```yaml
+---
+name: product-manager
+description: Product requirements analysis and PRD creation
+model: inherit
+---
+```
+
+#### 3. Commands (Default: `model: inherit`)
+
+**Behavior:**
+- Slash commands typically use `model: inherit`
+- This respects the user's model preference
+- Override only when the command requires specific model capabilities
+
+**Example:**
+```yaml
+---
+description: "Design database schema with ER diagrams"
+argument-hint: "[requirements]"
+model: inherit
+---
+```
+
+#### 4. Plugin Configurations (No model field)
+
+**Behavior:**
+- `plugin.json` files do **not** configure models
+- Model selection is handled at the skill/agent/command level
+- This keeps plugin metadata focused on structural information
+
+### When to Override
+
+Use explicit model values (`opus`, `haiku`, `sonnet`) **only** when:
+
+1. **Specific Capabilities Required**
+   - The task requires complex reasoning that only `opus` can handle
+   - Example: Multi-step architectural decision-making
+
+2. **Performance Optimization**
+   - Simple tasks that can use `haiku` for faster response
+   - Example: Quick format conversions or simple validations
+
+3. **Quality Differences**
+   - Testing has shown significant quality differences between models
+   - Document the reasoning in comments or documentation
+
+### Supported Model Values
+
+- `inherit` - Use the model from invocation context (recommended default)
+- `opus` - Claude Opus (highest capability, slower, more expensive)
+- `haiku` - Claude Haiku (fast, efficient, lower cost)
+- `sonnet` - Claude Sonnet (balanced capability and performance)
+
+### Best Practices
+
+1. **Start with `inherit`** for all new agents and commands
+2. **Document reasoning** if you override to a specific model
+3. **Test with different models** to verify the override is necessary
+4. **Refer to `.claude/CLAUDE.md`** for detailed model configuration guidelines
+5. **Consider user preferences** - users may have cost or performance constraints
+
+### Configuration Examples
+
+**Good - Using inherit (recommended):**
+```yaml
+---
+name: database-architect
+description: Database schema design workflow
+model: inherit
+---
+```
+
+**Acceptable - Justified override:**
+```yaml
+---
+name: complex-architecture-planner
+description: Multi-system architecture design requiring deep reasoning
+model: opus  # Requires opus for complex multi-step reasoning
+---
+```
+
+**Avoid - Unnecessary override:**
+```yaml
+---
+name: simple-formatter
+description: Format text output
+model: opus  # ❌ Unnecessary - haiku or inherit would work fine
+---
+```
+
 ## Agent Architecture
 
 ### Agent Types

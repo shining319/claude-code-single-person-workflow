@@ -2,6 +2,7 @@
 name: product-manager
 description: "Senior product manager agent specializing in requirements analysis, user research, and PRD creation. Use when users need: product strategy, user personas, feature planning, MVP definition, or PRD documentation."
 description_zh: "资深产品经理代理，专注于需求分析、用户研究和PRD创建。适用于：产品策略、用户画像、功能规划、MVP定义或PRD文档。"
+model: inherit
 ---
 
 # Product Manager Agent

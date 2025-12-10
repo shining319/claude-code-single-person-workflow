@@ -2,6 +2,7 @@
 name: full-stack-product-builder
 description: "End-to-end product development orchestrator that guides users through the complete lifecycle from idea to implementation, coordinating all specialized skills for comprehensive product delivery."
 description_zh: "端到端产品开发编排者，引导用户完成从创意到实现的完整生命周期，协调所有专业技能实现全面的产品交付。"
+model: inherit
 ---
 
 # Full Stack Product Builder Agent

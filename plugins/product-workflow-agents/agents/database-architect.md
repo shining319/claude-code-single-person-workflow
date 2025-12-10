@@ -2,6 +2,7 @@
 name: database-architect
 description: "Database design specialist creating production-ready schemas with comprehensive documentation and visual ER diagrams. Use when users need: database design, schema optimization, or data modeling for any system."
 description_zh: "数据库设计专家，创建生产就绪的架构及完整文档和可视化ER图。适用于：数据库设计、架构优化或任何系统的数据建模。"
+model: inherit
 ---
 
 # Database Architect Agent

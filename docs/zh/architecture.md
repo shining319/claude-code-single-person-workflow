@@ -204,6 +204,205 @@ triggers:
 [详细说明如下]
 ```
 
+## 命令使用模式
+
+### 概述
+
+本市场遵循标准化的命令命名约定，以确保所有插件的一致性和可发现性。
+
+### 命名约定
+
+#### 1. 单个技能插件
+
+**模式:** `/plugin-name`
+
+**示例:**
+- `/database-designer` - 数据库架构设计
+- `/product-manager` - 产品需求和PRD
+- `/ui-designer` - UI/UX设计规格
+- `/solution-architect` - 技术架构设计
+- `/academic-writing` - 学术写作辅助
+
+**用途:** 直接激活单个技能
+
+#### 2. 套件插件
+
+**模式:** `/spw-*` (spw = 单人工作流)
+
+**示例:**
+- `/spw-db` - 数据库设计（来自 product-development-suite）
+- `/spw-prd` - 产品需求（来自 product-development-suite）
+- `/spw-ui` - UI设计（来自 product-development-suite）
+- `/spw-arch` - 架构设计（来自 product-development-suite）
+- `/spw-writing` - 学术写作（来自 product-development-suite）
+
+**用途:** 快速访问 product-development-suite 包中的技能
+
+#### 3. 工作流插件
+
+**模式:** 描述性工作流名称
+
+**示例:**
+- `/build-dev-workflow` - 完整的产品开发工作流
+
+**用途:** 编排多个技能的完整端到端工作流
+
+### 命令 Frontmatter 规范
+
+命令在 `plugins/*/commands/*.md` 文件中定义，使用 YAML frontmatter。
+
+#### 允许的字段
+
+- `description` - 命令的英文描述
+- `argument-hint` - 命令参数的提示文本（在CLI中显示）
+- `allowed-tools` - 命令可以使用的工具（可选）
+- `model` - 模型配置（通常为 `inherit`）
+
+#### 重要说明
+
+- 命令 frontmatter **不支持** `description_zh`
+- 中文描述应在 README 文件和文档中维护
+- 保持命令定义简洁，专注于技能激活
+- 使用 `$ARGUMENTS` 变量将用户输入传递给技能
+
+#### 命令文件示例
+
+```markdown
+---
+description: "Design database schema with ER diagrams"
+argument-hint: "[requirements]"
+model: inherit
+---
+
+使用提供的需求激活 database-designer 技能: $ARGUMENTS
+```
+
+### 命令发现
+
+用户可以通过以下方式发现可用命令：
+1. **自动补全** - 在 Claude Code CLI 中
+2. **文档** - 在 README 文件和用户指南中
+3. **自然语言** - 命令也可以通过对话请求发现
+
+## 模型配置策略
+
+### 概述
+
+本市场使用基于继承的模型配置策略，在保持灵活性的同时提供合理的默认值。
+
+### 配置层次结构
+
+#### 1. 技能（Skills）（无 model 字段）
+
+**行为:**
+- 技能在其 frontmatter 中**不**指定 `model` 字段
+- 它们从调用上下文继承模型
+- 这允许同一技能根据调用方式使用不同的模型
+
+**理由:**
+- 为用户提供最大灵活性
+- 技能保持模型无关性
+- 用户可以为其用例选择最佳模型
+
+#### 2. 代理（Agents）（默认: `model: inherit`）
+
+**行为:**
+- 工作流代理通常在其 frontmatter 中使用 `model: inherit`
+- 这允许代理使用用户或系统指定的模型
+- 仅在代理任务需要特定模型时才覆盖
+
+**示例:**
+```yaml
+---
+name: product-manager
+description: 产品需求分析和PRD创建
+model: inherit
+---
+```
+
+#### 3. 命令（Commands）（默认: `model: inherit`）
+
+**行为:**
+- 斜杠命令通常使用 `model: inherit`
+- 这尊重用户的模型偏好
+- 仅在命令需要特定模型能力时才覆盖
+
+**示例:**
+```yaml
+---
+description: "Design database schema with ER diagrams"
+argument-hint: "[requirements]"
+model: inherit
+---
+```
+
+#### 4. 插件配置（无 model 字段）
+
+**行为:**
+- `plugin.json` 文件**不**配置模型
+- 模型选择在技能/代理/命令级别处理
+- 这使插件元数据专注于结构信息
+
+### 何时覆盖
+
+**仅**在以下情况使用显式模型值（`opus`, `haiku`, `sonnet`）:
+
+1. **需要特定能力**
+   - 任务需要只有 `opus` 才能处理的复杂推理
+   - 示例: 多步骤架构决策
+
+2. **性能优化**
+   - 简单任务可以使用 `haiku` 以获得更快响应
+   - 示例: 快速格式转换或简单验证
+
+3. **质量差异**
+   - 测试显示模型之间存在显著的质量差异
+   - 在注释或文档中记录原因
+
+### 支持的模型值
+
+- `inherit` - 使用调用上下文的模型（推荐默认值）
+- `opus` - Claude Opus（最高能力，较慢，成本较高）
+- `haiku` - Claude Haiku（快速，高效，成本较低）
+- `sonnet` - Claude Sonnet（能力和性能平衡）
+
+### 最佳实践
+
+1. **从 `inherit` 开始** - 所有新代理和命令
+2. **记录原因** - 如果覆盖为特定模型
+3. **使用不同模型测试** - 验证覆盖是否必要
+4. **参考 `.claude/CLAUDE.md`** - 获取详细的模型配置指南
+5. **考虑用户偏好** - 用户可能有成本或性能限制
+
+### 配置示例
+
+**良好 - 使用 inherit（推荐）:**
+```yaml
+---
+name: database-architect
+description: 数据库架构设计工作流
+model: inherit
+---
+```
+
+**可接受 - 有理由的覆盖:**
+```yaml
+---
+name: complex-architecture-planner
+description: 需要深度推理的多系统架构设计
+model: opus  # 需要 opus 进行复杂的多步骤推理
+---
+```
+
+**避免 - 不必要的覆盖:**
+```yaml
+---
+name: simple-formatter
+description: 格式化文本输出
+model: opus  # ❌ 不必要 - haiku 或 inherit 就可以
+---
+```
+
 ## 代理架构
 
 ### 代理类型

@@ -5,6 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-12-10
+
+### Added
+
+#### Development Standards & Workflow Rules
+
+- **Slash Commands & Command Usage Guidelines**
+  - Standardized command naming conventions
+    - Individual plugins: `/plugin-name` (e.g., `/database-designer`)
+    - Suite plugins: `/spw-*` prefix (e.g., `/spw-db`, `/spw-ui`)
+    - Workflow plugins: Descriptive names (e.g., `/build-dev-workflow`)
+  - Command frontmatter field restrictions
+    - Allowed fields: `description`, `argument-hint`, `allowed-tools`, `model`
+    - Removed `description_zh` from command frontmatter
+    - Chinese descriptions now maintained in docs/READMEs only
+
+- **Model Configuration Strategy**
+  - Introduced inherit-first model configuration approach
+  - Agents and commands default to `model: inherit`
+  - Skills inherit model from invocation context (no `model` field in skills)
+  - Plugin configurations (`plugin.json`) do not specify models
+  - Explicit model override (`opus`, `haiku`, `sonnet`) only when strongly justified
+
+### Changed
+
+#### Documentation Updates
+- **`.claude/CLAUDE.md`**: Added comprehensive workflow guidelines (Slash Commands, Model Configuration, Planning Process)
+- **`.augment/rules/auggie-workflow.md`**: Synchronized with CLAUDE.md workflow rules for Augment Agent
+- **`docs/en/architecture.md`** & **`docs/zh/architecture.md`**: Added command usage patterns and model configuration strategy sections
+- **`IMPLEMENTATION_SUMMARY.md`**: Updated architecture capabilities to reflect new development standards
+
 ## [1.1.0] - 2025-12-08
 
 ### Added
@@ -121,5 +152,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+[1.2.0]: https://github.com/shining319/claude-code-single-person-workflow/releases/tag/v1.2.0
 [1.1.0]: https://github.com/shining319/claude-code-single-person-workflow/releases/tag/v1.1.0
 [1.0.0]: https://github.com/shining319/claude-code-single-person-workflow/releases/tag/v1.0.0
