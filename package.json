@@ -1,6 +1,6 @@
 {
   "name": "single-person-workflow-marketplace",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Claude Code plugin marketplace for solo developers and creators",
   "scripts": {
     "validate": "node scripts/validate.js",

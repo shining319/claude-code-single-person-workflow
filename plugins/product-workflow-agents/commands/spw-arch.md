@@ -4,4 +4,4 @@ argument-hint: "[system or application requirements]"
 model: inherit
 ---
 
-Use the solution-architect skill. User input: $ARGUMENTS
+Use the solution-architect agent. User input: $ARGUMENTS

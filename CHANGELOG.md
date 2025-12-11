@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1] - 2025-12-11
+
+### Fixed
+
+#### Command Agent Invocation
+- **Fixed 5 slash commands to correctly invoke agents instead of skills**
+  - `spw-prd.md`: Now correctly invokes `product-manager agent` (was: `product-manager skill`)
+  - `spw-db.md`: Now correctly invokes `database-architect agent` (was: `database-designer skill`)
+  - `spw-ui.md`: Now correctly invokes `ui-ux-designer agent` (was: `ui-designer skill`)
+  - `spw-arch.md`: Now correctly invokes `solution-architect agent` (was: `solution-architect skill`)
+  - `spw-writing.md`: Now correctly invokes `technical-writer agent` (was: `academic-writing-style skill`)
+  - **Impact**: Commands now properly delegate to specialized agents with independent context windows
+  - **Compliance**: Aligns with Claude Code official documentation on agent invocation patterns
+
 ## [1.2.0] - 2025-12-10
 
 ### Added
