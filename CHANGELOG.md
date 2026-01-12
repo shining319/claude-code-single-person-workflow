@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-01-11
+
+### Changed
+
+#### Skills
+
+- **ui-designer**: Optimized workflow from 5 steps to streamlined 3-step process
+  - **Workflow Simplification**: Reduced from 5-step interaction (需求收集 → 页面规划 → /设计 → /下一步 → /流程图) to 3-step flow (需求收集 → 页面规划 → 模式选择 → 输出)
+  - **Removed Interactive Commands**: Eliminated `/设计`, `/下一步`, `/流程图` slash commands for cleaner user experience
+  - **Dual-Mode Output**: Added choice between code implementation and design documentation
+    - **Code Implementation Mode**: Generates production-ready frontend code (HTML/CSS/JS or React/Vue) with integrated Design Thinking and Frontend Aesthetics Guidelines
+    - **Design Documentation Mode**: Produces comprehensive single-file UI specification (`ui-specification.md`)
+  - **Design Quality Enhancement**:
+    - Integrated Design Thinking framework for strategic design decisions
+    - Added Frontend Aesthetics Guidelines to avoid generic AI aesthetics
+    - Emphasis on distinctive, memorable designs with intentional aesthetic direction
+  - **File Output Clarification**: `design/` directory now exclusively stores design documentation; code files placed flexibly based on project structure
+  - **Documentation Updated**: Updated user guides and README to reflect new capabilities
+  - Line count reduced from 286 to 232 (19% reduction) while adding significant functionality
+
 ## [1.2.1] - 2025-12-11
 
 ### Fixed

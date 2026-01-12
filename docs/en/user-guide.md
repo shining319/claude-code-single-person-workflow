@@ -167,14 +167,14 @@ If you installed the product-development-suite or full marketplace:
 
 ### 4. UI Designer
 
-**Purpose:** Transform product requirements into professional UI/UX design specifications.
+**Purpose:** Transform product requirements into professional UI/UX solutions—either as production-ready frontend code or comprehensive design specifications.
 
 **When to Use:**
 - Planning page structure and information architecture
 - Designing UI layouts and components
 - Creating color schemes and visual guidelines
-- Writing detailed design specifications
-- Creating user flow diagrams
+- Generating production-ready frontend code with distinctive aesthetics
+- Writing detailed design specifications for developers
 
 **Slash Commands:**
 - `/ui-designer [page or feature to design]`
@@ -184,7 +184,7 @@ If you installed the product-development-suite or full marketplace:
 ```
 "Design the UI for my dashboard application"
 "Create a design specification for a mobile checkout flow"
-"Plan the information architecture for an admin panel"
+"Implement a landing page with modern aesthetics"
 ```
 
 **Slash Command Examples:**
@@ -193,12 +193,38 @@ If you installed the product-development-suite or full marketplace:
 /spw-ui "mobile checkout flow with payment options"
 ```
 
-**Output:**
-- Page structure and navigation
-- Component design specifications
-- Color palettes and typography
-- Detailed design documents
-- User flow diagrams
+**Workflow:**
+1. **Requirements Gathering** - Answer 5 questions about your product (target users, features, platform, etc.)
+2. **Page Structure Planning** - Receive page structure and user flow planning
+3. **Output Mode Selection** - Choose between:
+   - **Code Implementation** - Production-ready frontend code (HTML/CSS/JS or React/Vue)
+   - **Design Documentation** - Comprehensive UI specification document
+
+**Code Implementation Mode:**
+
+When you select code implementation, the skill applies:
+- **Design Thinking Framework** - Strategic decisions on aesthetic direction (minimal vs. maximalist, retro-futuristic vs. organic, etc.)
+- **Frontend Aesthetics Guidelines** - Distinctive typography, cohesive color themes, thoughtful animations, creative spatial composition
+- Focus on creating memorable, context-appropriate designs that avoid generic AI aesthetics
+
+Output: Production-grade code with complete styles, animations, and interactions. Files placed flexibly based on your project structure.
+
+**Design Documentation Mode:**
+
+Generates a comprehensive `ui-specification.md` file containing:
+- Page overview and design concept
+- Layout specifications (grid system, spacing, responsive breakpoints)
+- Color and typography standards
+- Component inventory (table format)
+- Interaction and animation guidelines
+
+Output location: `outputs/<project-name>/design/ui-specification.md`
+
+**Key Features:**
+- **Dual-Mode Flexibility** - Choose code or documentation based on your needs
+- **Design Thinking Integration** - Strategic aesthetic direction before implementation
+- **Quality Aesthetics** - Avoids overused fonts (Inter, Roboto), cliched color schemes, predictable layouts
+- **Streamlined Workflow** - 3-step process from requirements to output
 
 ### 5. Solution Architect
 

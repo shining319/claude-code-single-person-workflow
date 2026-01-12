@@ -42,3 +42,7 @@ pnpm-lock.yaml
 /.claude/CLAUDE.md
 /.augment/
 /.claude/
+/plugins/product-workflow-agents/skills/ui-designer/SKILL.md.backup
+/plugins/product-development-suite/skills/ui-designer/SKILL.md.backup
+/plugins/ui-designer/skills/ui-designer/SKILL.md.backup
+/skills/ui-designer/SKILL.md.backup
