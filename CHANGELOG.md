@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2025-01-12
+
+### Added
+
+#### New Skill & Plugin
+- **ui-ux-pro-max**: Data-driven UI/UX design intelligence plugin
+  - **Searchable Design Knowledge Base**: BM25-powered search across 50+ styles, 21 color palettes, 50 font pairings
+  - **Multi-Framework Support**: Guidelines for React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui
+  - **Design System Data**: Comprehensive CSV-based design knowledge (styles, colors, typography, UX guidelines, framework-specific best practices)
+  - **Professional UI Checklists**: Pre-delivery quality checks for production-ready designs
+  - **Python-Powered Search**: Pure Python implementation with no external dependencies
+  - **Independent Plugin**: Available at `/plugins/ui-ux-pro-max/`
+  - **Suite Integration**: Added to both `product-development-suite` and `product-workflow-agents`
+
+#### New Agent
+- **ui-ux-pro-max agent**: Workflow orchestration for data-driven design recommendations
+  - Four-phase workflow: Requirements Analysis → Design Intelligence Search → Framework-Specific Guidance → Design Recommendations
+  - Automatic activation patterns for design-related queries
+  - Comprehensive deliverables: design recommendations, implementation guides, design tokens, resource links
+
+#### New Commands
+- `/ui-ux-pro-max` - Independent plugin command
+- `/spw-ui-pro-max` - Suite command for product-development-suite and product-workflow-agents
+
+### Changed
+
+#### Configuration Updates
+- **marketplace.json**: Added ui-ux-pro-max plugin entry (total plugins: 7 → 8)
+- **sync-skills.js**: Updated skill synchronization logic to include ui-ux-pro-max
+- **CLAUDE.md**: Updated statistics (6 skills, 7 agents), command tables, and usage examples
+- **README files**: Updated suite plugin READMEs to include ui-ux-pro-max in available skills/agents
+
+#### Documentation
+- Updated all relevant documentation to reflect new plugin (IMPLEMENTATION_SUMMARY.md, CLAUDE.md, README.md)
+- Added comprehensive bilingual README for ui-ux-pro-max plugin
+
 ## [1.3.0] - 2025-01-11
 
 ### Changed

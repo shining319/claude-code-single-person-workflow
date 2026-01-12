@@ -46,6 +46,13 @@
       "category": "architecture"
     },
     {
+      "name": "ui-ux-pro-max",
+      "source": "./plugins/ui-ux-pro-max",
+      "version": "1.0.0",
+      "description": "Data-driven UI/UX design intelligence with style guides, color palettes, typography, and framework recommendations",
+      "category": "design"
+    },
+    {
       "name": "product-development-suite",
       "source": "./plugins/product-development-suite",
       "version": "1.0.0",

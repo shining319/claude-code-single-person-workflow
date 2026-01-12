@@ -16,6 +16,7 @@ Intelligent workflow agents that orchestrate multiple skills for complete produc
 4. **UI/UX Designer** - Interface design and specifications
 5. **Technical Writer** - Documentation and technical writing
 6. **Full Stack Product Builder** - End-to-end orchestrator
+7. **UI/UX Pro Max** - Data-driven design intelligence with searchable knowledge base
 
 ### How It Works
 
@@ -99,6 +100,7 @@ outputs/
 4. **UI/UX设计师** - 界面设计和规格说明
 5. **技术文档专家** - 文档和技术写作
 6. **全栈产品构建者** - 端到端编排
+7. **UI/UX Pro Max** - 数据驱动的设计智能，含可搜索的知识库
 
 ### 工作原理
 

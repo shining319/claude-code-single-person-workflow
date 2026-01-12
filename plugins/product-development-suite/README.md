@@ -15,6 +15,7 @@ Complete all-in-one suite for single-person product development. Includes all fi
 3. **Product Manager** - Requirements analysis and PRD creation
 4. **UI Designer** - Interface design and specifications
 5. **Solution Architect** - Technical architecture and deployment planning
+6. **UI/UX Pro Max** - Data-driven design intelligence with searchable knowledge base
 
 ### Features
 
@@ -82,6 +83,7 @@ outputs/
 3. **产品经理** - 需求分析和PRD创建
 4. **UI设计师** - 界面设计和规格说明
 5. **解决方案架构师** - 技术架构和部署规划
+6. **UI/UX Pro Max** - 数据驱动的设计智能，含可搜索的知识库
 
 ### 功能特性
 

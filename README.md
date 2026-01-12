@@ -23,9 +23,9 @@ A curated collection of Claude Code plugins designed specifically for single-per
 
 ### Features
 
-- 🎯 **Specialized Skills**: 5 focused plugins for specific tasks
+- 🎯 **Specialized Skills**: 6 focused plugins for specific tasks
 - 📦 **All-in-One Suite**: Complete toolkit in one installation
-- 🤖 **Intelligent Agents**: 6 workflow agents for automated orchestration
+- 🤖 **Intelligent Agents**: 7 workflow agents for automated orchestration
 - 🌏 **Bilingual Support**: Full Chinese and English documentation
 - 🚀 **Production-Ready**: Battle-tested workflows and best practices
 
@@ -38,8 +38,9 @@ A curated collection of Claude Code plugins designed specifically for single-per
 | **[product-manager](plugins/product-manager)** | Requirements analysis and PRD creation | Skill |
 | **[ui-designer](plugins/ui-designer)** | UI/UX design with detailed specifications | Skill |
 | **[solution-architect](plugins/solution-architect)** | Technical architecture and deployment planning | Skill |
+| **[ui-ux-pro-max](plugins/ui-ux-pro-max)** | Data-driven UI/UX design intelligence with searchable knowledge base | Skill |
 | **[product-development-suite](plugins/product-development-suite)** | All skills in one package | Suite |
-| **[product-workflow-agents](plugins/product-workflow-agents)** | 6 intelligent workflow agents | Agents |
+| **[product-workflow-agents](plugins/product-workflow-agents)** | 7 intelligent workflow agents | Agents |
 
 ### Quick Start
 
@@ -95,6 +96,7 @@ Use direct commands for guaranteed activation:
 /ui-designer "user dashboard with analytics widgets"
 /solution-architect "microservices architecture for real-time chat"
 /academic-writing "technical report on cloud computing"
+/ui-ux-pro-max "design a SaaS dashboard with glassmorphism style"
 ```
 
 **Suite Plugin Commands (spw = single-person workflow):**
@@ -104,6 +106,7 @@ Use direct commands for guaranteed activation:
 /spw-ui "admin panel interface"
 /spw-arch "SaaS platform architecture"
 /spw-writing "research paper on AI ethics"
+/spw-ui-pro-max "color palette for healthcare SaaS application"
 ```
 
 **Workflow Command:**
@@ -122,6 +125,7 @@ Use direct commands for guaranteed activation:
 | UI/UX Design | `/ui-designer [page/feature]` | `/spw-ui [page/feature]` |
 | Architecture Design | `/solution-architect [system]` | `/spw-arch [system]` |
 | Academic Writing | `/academic-writing [topic]` | `/spw-writing [topic]` |
+| Data-Driven Design | `/ui-ux-pro-max [design query]` | `/spw-ui-pro-max [design query]` |
 | Full Workflow | `/build-dev-workflow [product description]` | — |
 
 ### Output File Locations
@@ -181,9 +185,9 @@ For details, see [User Guide](docs/en/user-guide.md#saving-output).
 
 ### 功能特性
 
-- 🎯 **专业技能**: 5个专注于特定任务的插件
+- 🎯 **专业技能**: 6个专注于特定任务的插件
 - 📦 **一体化套件**: 一次安装即获得完整工具包
-- 🤖 **智能代理**: 6个工作流代理用于自动编排
+- 🤖 **智能代理**: 7个工作流代理用于自动编排
 - 🌏 **双语支持**: 完整的中英文文档
 - 🚀 **生产就绪**: 经过实战检验的工作流和最佳实践
 
@@ -196,8 +200,9 @@ For details, see [User Guide](docs/en/user-guide.md#saving-output).
 | **[product-manager](plugins/product-manager)** | 需求分析和PRD创建 | 技能 |
 | **[ui-designer](plugins/ui-designer)** | UI/UX设计及详细规格 | 技能 |
 | **[solution-architect](plugins/solution-architect)** | 技术架构和部署规划 | 技能 |
+| **[ui-ux-pro-max](plugins/ui-ux-pro-max)** | 数据驱动的UI/UX设计智能，含可搜索的知识库 | 技能 |
 | **[product-development-suite](plugins/product-development-suite)** | 所有技能合一 | 套件 |
-| **[product-workflow-agents](plugins/product-workflow-agents)** | 6个智能工作流代理 | 代理 |
+| **[product-workflow-agents](plugins/product-workflow-agents)** | 7个智能工作流代理 | 代理 |
 
 ### 快速开始
 
@@ -253,6 +258,7 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 /ui-designer "包含分析小部件的用户仪表板"
 /solution-architect "实时聊天的微服务架构"
 /academic-writing "关于云计算的技术报告"
+/ui-ux-pro-max "为SaaS仪表板设计玻璃拟态风格"
 ```
 
 **套件插件命令 (spw = 单人工作流):**
@@ -262,6 +268,7 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 /spw-ui "管理面板界面"
 /spw-arch "SaaS平台架构"
 /spw-writing "关于AI伦理的研究论文"
+/spw-ui-pro-max "医疗SaaS应用配色方案"
 ```
 
 **工作流命令:**
@@ -280,6 +287,7 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 | UI/UX设计 | `/ui-designer [页面/功能]` | `/spw-ui [页面/功能]` |
 | 架构设计 | `/solution-architect [系统]` | `/spw-arch [系统]` |
 | 学术写作 | `/academic-writing [主题]` | `/spw-writing [主题]` |
+| 数据驱动设计 | `/ui-ux-pro-max [设计查询]` | `/spw-ui-pro-max [设计查询]` |
 | 完整工作流 | `/build-dev-workflow [产品描述]` | — |
 
 ### 文件输出位置

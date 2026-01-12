@@ -1,0 +1,25 @@
+{
+  "name": "ui-ux-pro-max",
+  "version": "1.0.0",
+  "description": "Data-driven UI/UX design intelligence with comprehensive style guides, color palettes, typography, and framework-specific recommendations",
+  "author": {
+    "name": "shining319",
+    "email": "lofterruyuan@gmail.com",
+    "url": "https://github.com/shining319"
+  },
+  "homepage": "https://github.com/shining319/claude-code-single-person-workflow#readme",
+  "repository": "https://github.com/shining319/claude-code-single-person-workflow",
+  "license": "MIT",
+  "keywords": [
+    "ui-ux",
+    "design-system",
+    "color-palette",
+    "typography",
+    "react",
+    "nextjs",
+    "vue",
+    "tailwind",
+    "shadcn-ui",
+    "design-intelligence"
+  ]
+}
