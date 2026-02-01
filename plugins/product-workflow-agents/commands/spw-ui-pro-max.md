@@ -4,4 +4,4 @@ argument-hint: "[design request or question]"
 model: inherit
 ---
 
-Use the ui-ux-pro-max skill. User input: $ARGUMENTS
+Use the ui-ux-pro-max agent. User input: $ARGUMENTS

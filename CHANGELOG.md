@@ -41,6 +41,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated all relevant documentation to reflect new plugin (IMPLEMENTATION_SUMMARY.md, CLAUDE.md, README.md)
 - Added comprehensive bilingual README for ui-ux-pro-max plugin
 
+### Fixed
+
+#### Commands
+- **spw-ui-pro-max**: Corrected command to invoke `ui-ux-pro-max agent` instead of skill
+  - **Issue**: Command was calling skill directly, causing conflicts with `/ui-ux-pro-max` command from ui-ux-pro-max plugin
+  - **Resolution**: Updated to call agent for workflow orchestration (Requirements Analysis → Design Intelligence → Framework Guidance → Recommendations)
+  - **Impact**: `/spw-ui-pro-max` now properly invokes the multi-phase agent workflow instead of the lightweight skill
+
 ## [1.3.0] - 2025-01-11
 
 ### Changed

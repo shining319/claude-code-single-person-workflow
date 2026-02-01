@@ -128,6 +128,10 @@ Use direct commands for guaranteed activation:
 | Data-Driven Design | `/ui-ux-pro-max [design query]` | `/spw-ui-pro-max [design query]` |
 | Full Workflow | `/build-dev-workflow [product description]` | — |
 
+**Note on Data-Driven Design Commands:**
+- `/ui-ux-pro-max` invokes the **skill** directly (lightweight, quick design queries)
+- `/spw-ui-pro-max` invokes the **agent** workflow (comprehensive 4-phase process: Requirements → Search → Framework Guidance → Recommendations)
+
 ### Output File Locations
 
 All generated files are organized in `outputs/<project-name>/` directory:
@@ -289,6 +293,10 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 | 学术写作 | `/academic-writing [主题]` | `/spw-writing [主题]` |
 | 数据驱动设计 | `/ui-ux-pro-max [设计查询]` | `/spw-ui-pro-max [设计查询]` |
 | 完整工作流 | `/build-dev-workflow [产品描述]` | — |
+
+**数据驱动设计命令说明：**
+- `/ui-ux-pro-max` 直接调用 **skill**（轻量级，快速设计查询）
+- `/spw-ui-pro-max` 调用 **agent** 工作流（完整4阶段流程：需求分析 → 设计搜索 → 框架指导 → 推荐输出）
 
 ### 文件输出位置
 
