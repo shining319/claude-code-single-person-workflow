@@ -14,7 +14,7 @@ Complete all-in-one suite for single-person product development. Includes all fi
 2. **Database Designer** - Complete database schema design with ER diagrams
 3. **Product Manager** - Requirements analysis and PRD creation
 4. **UI Designer** - Interface design and specifications
-5. **Solution Architect** - Technical architecture and deployment planning
+5. **Solution Architect** - System architecture, capacity estimation, Java/TypeScript stack selection, deployment and ADRs
 6. **UI/UX Pro Max** - Data-driven design intelligence with searchable knowledge base
 
 ### Features
@@ -82,7 +82,7 @@ outputs/
 2. **数据库设计器** - 完整的数据库架构设计和ER图
 3. **产品经理** - 需求分析和PRD创建
 4. **UI设计师** - 界面设计和规格说明
-5. **解决方案架构师** - 技术架构和部署规划
+5. **解决方案架构师** - 系统架构、容量估算、Java/TypeScript 技术选型、部署方案与 ADR
 6. **UI/UX Pro Max** - 数据驱动的设计智能，含可搜索的知识库
 
 ### 功能特性

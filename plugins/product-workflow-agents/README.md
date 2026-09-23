@@ -11,7 +11,7 @@ Intelligent workflow agents that orchestrate multiple skills for complete produc
 ### Available Agents
 
 1. **Product Manager** - Requirements analysis and PRD creation
-2. **Solution Architect** - Technical architecture and tech stack selection
+2. **Solution Architect** - System architecture, capacity estimation, stack selection, deployment, ADRs and architecture review
 3. **Database Architect** - Database schema design with ER diagrams
 4. **UI/UX Designer** - Interface design and specifications
 5. **Technical Writer** - Documentation and technical writing; polishes drafts and matches your style
@@ -95,7 +95,7 @@ outputs/
 ### 可用代理
 
 1. **产品经理** - 需求分析和PRD创建
-2. **解决方案架构师** - 技术架构和技术栈选择
+2. **解决方案架构师** - 系统架构、容量估算、技术选型、部署方案、ADR 与架构评审
 3. **数据库架构师** - 数据库架构设计和ER图
 4. **UI/UX设计师** - 界面设计和规格说明
 5. **技术文档专家** - 文档和技术写作，支持润色改写和模仿文风

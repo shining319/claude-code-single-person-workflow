@@ -240,14 +240,25 @@
 
 ### 5. 解决方案架构师
 
-**用途:** 将产品需求转化为可执行的技术架构设计。
+**用途:** 把产品需求转化为小团队能开发、能运维、能演进的系统架构。
 
 **何时使用:**
-- 设计系统架构
-- 选择技术栈
-- 规划部署策略
-- 审查架构决策
-- 创建技术方案
+- 根据 PRD 或想法设计系统架构
+- 在 Java 线（React/Vue + Spring Boot）和 TypeScript 全栈线之间做选择
+- 估算容量（峰值 QPS、存储、带宽），量化非功能需求
+- 按预算和地域规划托管部署（Vercel、Railway、Cloud Run、VPS、K8s、国内云）
+- 用检查表和反模式清单评审现有架构
+
+**工作流程（7 步）:**
+1. 需求澄清（规模、团队、地域与合规、SEO、实时性、一致性、预算）
+2. 量化非功能需求（可用性、P95/P99、RPO/RTO）
+3. 容量估算，并写出计算过程
+4. 选择架构模式（默认模块化单体）和技术线，从 10 套参考架构中裁剪
+5. 分层选型，写明被否决的备选方案
+6. 规划部署、CI/CD、密钥、备份和监控
+7. 输出设计文档和 ADR，附演进路线
+
+**硬规则:** 默认 PostgreSQL；每个方案都包含认证授权、备份、可观测性、CI/CD、密钥管理；涉及欧盟提示 GDPR，涉及中国大陆提示 ICP 备案；版本和价格标注「需核验」。
 
 **斜杠命令:**
 - `/solution-architect [系统或应用需求]`
@@ -264,14 +275,15 @@
 ```
 /solution-architect "具有WebSocket支持的实时聊天应用"
 /spw-arch "具有多租户架构的SaaS平台"
+/solution-architect "面向欧盟的 B2B SaaS，Java 团队 5 人，预算每月 300 美元以内"
+/spw-arch "评审这份架构：docs/architecture.md"
 ```
 
-**输出内容：**
-- 完整的架构设计
-- 技术栈推荐
-- 部署策略
-- 基础设施规划
-- 架构审查报告
+**输出内容**（`outputs/<project-name>/architecture/`）：
+- `system-architecture.md` - 15 节设计文档，含 Mermaid 架构图
+- `architecture-decisions.md` - ADR，含被否决的方案
+- `tech-stack.md`、`deployment-plan.md`（含上线清单）、`cost-estimate.md` - 按需输出
+- 架构评审报告（评审模式）
 
 ## 工作流代理
 

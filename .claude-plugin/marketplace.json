@@ -1,6 +1,6 @@
 {
   "name": "single-person-workflow-marketplace",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Comprehensive plugin marketplace for solo developers and creators, featuring tools for writing, database design, product management, UI/UX design, and solution architecture",
   "owner": {
     "name": "shining319",
@@ -41,8 +41,8 @@
     {
       "name": "solution-architect",
       "source": "./plugins/solution-architect",
-      "version": "1.0.0",
-      "description": "Solution architect for technical architecture design and technology selection",
+      "version": "1.1.0",
+      "description": "Solution architect: capacity estimate, Java/TypeScript stack selection, reference architectures, deployment, ADRs and review | 解决方案架构师：容量估算、Java/TypeScript 技术选型、参考架构、部署方案、ADR 与架构评审",
       "category": "architecture"
     },
     {
@@ -55,14 +55,14 @@
     {
       "name": "product-development-suite",
       "source": "./plugins/product-development-suite",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "description": "Complete suite with all skills included",
       "category": "productivity"
     },
     {
       "name": "product-workflow-agents",
       "source": "./plugins/product-workflow-agents",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "description": "Intelligent workflow agents for complete product development",
       "category": "automation"
     }

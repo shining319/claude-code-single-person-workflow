@@ -5,6 +5,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2026-09-23
+
+### Added
+
+#### solution-architect Skill
+- **7-step workflow**: requirements clarification (10 dimensions) → NFR quantification → capacity estimate (formulas and single-instance ceilings) → pattern and stack line → per-layer selection → deployment → design doc and ADRs
+- **Mode routing**: full design, design with assumptions, concept only, selection only, deployment only, architecture review
+- **10 hard rules**: modular monolith and PostgreSQL by default; every design covers auth, backups, observability, CI/CD and secrets; idempotency for money flows; GDPR / ICP flags; evolution path; explicit trade-offs; "needs verification" for versions and prices
+- **New references** (Chinese, from the system architecture handbook):
+  - `architecture-patterns.md`: backend/rendering/frontend patterns, main stack decision tree, trade-off table
+  - `tech-stack-java.md`: Line A (React/Vue + Spring Boot, Spring Cloud / Alibaba / K8s-native)
+  - `tech-stack-typescript.md`: Line B (Next.js, Nuxt, TanStack Start, React Router, Hono, NestJS, ORM, queues, monorepo)
+  - `tech-selection-matrix.md`: cross-cutting layers from mobile to observability
+  - `data-architecture.md`: database choice, caching, consistency, multi-tenancy, scaling path, backups
+  - `nfr-security-compliance.md`: performance, reliability, OWASP, GDPR/PIPL/PCI/HIPAA, cost tiers
+  - `reference-architectures.md`: 10 reference architectures (A–J) with Mermaid diagrams
+  - `output-templates.md`: 15-section design doc, ADR, launch checklist, anti-patterns, review checklist
+- **Architecture review mode** with a per-item pass / risk / fail report
+
+### Changed
+
+#### solution-architect Skill
+- `SKILL.md` rewritten around the 7-step workflow, reference map, hard rules, output files and review mode; description adds capacity planning, ADR and review triggers
+- `deployment-guide.md` replaced with hosting models, VPS topology, containers, CI/CD, release strategy, IaC, secrets, regions, plus a platform migration section
+- Versions and service status checked against sources as of 2026-09: Java 25 LTS, Spring Boot 4.x, Spring AI 2.x, Node.js 24 LTS, Next.js 16, Nuxt 4, Tailwind CSS v4, Prisma 7 (no Rust engine), Drizzle 1.0 still beta; Auth.js now maintained by the Better Auth team; Lucia is a learning resource; Lemon Squeezy still operating alongside Stripe Managed Payments; Redis 8 AGPLv3 option vs Valkey; Eureka still maintained
+- Output: `system-architecture.md` and `architecture-decisions.md` always; `tech-stack.md`, `deployment-plan.md`, `cost-estimate.md` when relevant
+
+#### Agents, Commands and Configuration
+- **solution-architect agent**: mode selection, 7-step workflow, hard rules, new deliverables and handoff to database-architect
+- **full-stack-product-builder agent**: Phase 2 now covers NFRs, capacity, reference architecture and ADRs; hands data-architecture decisions to Phase 3; architecture output tree adds ADR and deployment files
+- **Commands** `/solution-architect`, `/spw-arch` (both suites): bilingual descriptions and argument hints
+- **solution-architect plugin.json**: bilingual description, new keywords, version 1.0.0 → 1.1.0
+- **marketplace.json**: version 1.5.0 → 1.6.0; solution-architect entry updated; product-development-suite and product-workflow-agents → 1.2.0
+
+#### Documentation
+- Updated README.md, docs/en|zh/user-guide.md, and the solution-architect, product-development-suite and product-workflow-agents READMEs
+
+### Removed
+
+#### solution-architect Skill
+- `references/tech-stacks.md`, including the Go / Rust / Python stacks and the list of seven Java data-access options. The skill now covers only the Java and TypeScript lines
+- Outdated statements from the old deployment guide (e.g. "D1 still in beta", "Workers cannot hold WebSocket connections", fixed platform prices)
+
 ## [1.5.0] - 2026-09-23
 
 ### Added

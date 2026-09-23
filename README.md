@@ -37,7 +37,7 @@ A curated collection of Claude Code plugins designed specifically for single-per
 | **[database-designer](plugins/database-designer)** | Complete database schema design with ER diagrams | Skill |
 | **[product-manager](plugins/product-manager)** | Requirements analysis and PRD creation | Skill |
 | **[ui-designer](plugins/ui-designer)** | UI/UX design with detailed specifications | Skill |
-| **[solution-architect](plugins/solution-architect)** | Technical architecture and deployment planning | Skill |
+| **[solution-architect](plugins/solution-architect)** | System architecture, Java/TypeScript stack selection, deployment, ADRs and architecture review | Skill |
 | **[ui-ux-pro-max](plugins/ui-ux-pro-max)** | Data-driven UI/UX design intelligence with searchable knowledge base | Skill |
 | **[product-development-suite](plugins/product-development-suite)** | All skills in one package | Suite |
 | **[product-workflow-agents](plugins/product-workflow-agents)** | 7 intelligent workflow agents | Agents |
@@ -203,7 +203,7 @@ For details, see [User Guide](docs/en/user-guide.md#saving-output).
 | **[database-designer](plugins/database-designer)** | 完整的数据库架构设计和ER图 | 技能 |
 | **[product-manager](plugins/product-manager)** | 需求分析和PRD创建 | 技能 |
 | **[ui-designer](plugins/ui-designer)** | UI/UX设计及详细规格 | 技能 |
-| **[solution-architect](plugins/solution-architect)** | 技术架构和部署规划 | 技能 |
+| **[solution-architect](plugins/solution-architect)** | 系统架构、Java/TypeScript 技术选型、部署方案、ADR 与架构评审 | 技能 |
 | **[ui-ux-pro-max](plugins/ui-ux-pro-max)** | 数据驱动的UI/UX设计智能，含可搜索的知识库 | 技能 |
 | **[product-development-suite](plugins/product-development-suite)** | 所有技能合一 | 套件 |
 | **[product-workflow-agents](plugins/product-workflow-agents)** | 7个智能工作流代理 | 代理 |

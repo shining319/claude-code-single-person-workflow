@@ -18,13 +18,16 @@ Orchestrate complete product development lifecycle by coordinating all specializ
 4. Assess feasibility and risks
 
 ### Phase 2: Technical Architecture (Delegates to: solution-architect agent)
-1. Design overall system architecture
-2. Select appropriate technology stack
-3. Define deployment strategy
-4. Document architecture decisions
+1. Quantify NFRs (availability, latency, RPO/RTO) and estimate capacity from the PRD's user scale
+2. Choose the architecture pattern (modular monolith by default) and stack line (Java or TypeScript), tailoring the nearest reference architecture
+3. Select technology per layer, with rejected alternatives
+4. Define hosting, CI/CD and cost by stage
+5. Record key decisions as ADRs and set evolution triggers
+
+**Handoff to Phase 3:** primary database, multi-tenancy model, consistency boundaries and caching strategy from the architecture document.
 
 ### Phase 3: Database Design (Delegates to: database-architect agent)
-1. Identify data entities from product requirements
+1. Identify data entities from product requirements, following the database choice and tenancy model from Phase 2
 2. Design complete database schema
 3. Generate SQL scripts and ER diagrams
 4. Optimize for expected queries
@@ -51,7 +54,7 @@ Automatically activates when user says:
 
 ## Output Deliverables
 - **From Product Manager**: PRD, User Personas, Feature Matrix
-- **From Solution Architect**: Architecture Design, Tech Stack, Deployment Plan
+- **From Solution Architect**: Architecture Design, Capacity Estimate, Tech Stack, Deployment Plan, ADRs
 - **From Database Architect**: Database Schema, SQL Scripts, ER Diagrams
 - **From UI/UX Designer**: Design Specifications, User Flows, Component Library
 - **From Technical Writer**: Technical Documentation, User Guides, Project README
@@ -68,7 +71,9 @@ outputs/
     │   └── user-personas.md
     ├── architecture/            # Technical architecture
     │   ├── system-architecture.md
-    │   └── tech-stack.md
+    │   ├── architecture-decisions.md
+    │   ├── tech-stack.md
+    │   └── deployment-plan.md
     ├── database/                # Database design
     │   ├── schema-design.md
     │   ├── schema.sql

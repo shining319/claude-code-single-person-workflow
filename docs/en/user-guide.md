@@ -240,14 +240,25 @@ Output location: `outputs/<project-name>/design/ui-specification.md`
 
 ### 5. Solution Architect
 
-**Purpose:** Transform product requirements into executable technical architecture designs.
+**Purpose:** Transform product requirements into an architecture a small team can build, run and evolve.
 
 **When to Use:**
-- Designing system architecture
-- Selecting technology stacks
-- Planning deployment strategies
-- Reviewing architecture decisions
-- Creating technical proposals
+- Designing system architecture from a PRD or an idea
+- Choosing between the Java line (React/Vue + Spring Boot) and the TypeScript full-stack line
+- Estimating capacity (peak QPS, storage, bandwidth) and quantifying NFRs
+- Planning hosting and deployment by budget and region (Vercel, Railway, Cloud Run, VPS, K8s, China clouds)
+- Reviewing an existing architecture against a checklist and common anti-patterns
+
+**How It Works (7 steps):**
+1. Clarify requirements (scale, team, region/compliance, SEO, real-time, consistency, budget)
+2. Quantify NFRs (availability, P95/P99, RPO/RTO)
+3. Estimate capacity, showing the arithmetic
+4. Choose the pattern (modular monolith by default) and stack line; tailor one of 10 reference architectures
+5. Select technology per layer, with rejected alternatives
+6. Plan deployment, CI/CD, secrets, backups and monitoring
+7. Write the design doc and ADRs, including an evolution roadmap
+
+**Hard rules:** PostgreSQL by default; every design covers auth, backups, observability, CI/CD and secrets; GDPR/ICP flagged when relevant; versions and prices marked "needs verification".
 
 **Slash Commands:**
 - `/solution-architect [system or application requirements]`
@@ -264,14 +275,15 @@ Output location: `outputs/<project-name>/design/ui-specification.md`
 ```
 /solution-architect "real-time chat application with WebSocket support"
 /spw-arch "SaaS platform with multi-tenant architecture"
+/solution-architect "EU B2B SaaS, 5-person Java team, budget under $300/month"
+/spw-arch "review this architecture: docs/architecture.md"
 ```
 
-**Output:**
-- Complete architecture designs
-- Technology stack recommendations
-- Deployment strategies
-- Infrastructure planning
-- Architecture review reports
+**Output** (`outputs/<project-name>/architecture/`):
+- `system-architecture.md` - 15-section design doc with Mermaid diagrams
+- `architecture-decisions.md` - ADRs with rejected alternatives
+- `tech-stack.md`, `deployment-plan.md` (with launch checklist), `cost-estimate.md` - when relevant
+- Architecture review report (review mode)
 
 ## Workflow Agents
 

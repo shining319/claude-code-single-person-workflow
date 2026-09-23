@@ -1,7 +1,7 @@
 {
   "name": "solution-architect",
-  "version": "1.0.0",
-  "description": "Solution architect for technical architecture design, technology selection, and deployment planning",
+  "version": "1.1.0",
+  "description": "Solution architect for system architecture, technology selection and deployment: NFR and capacity estimation, modular-monolith-first design, Java (Spring Boot) and TypeScript full-stack lines, 10 reference architectures, ADRs and architecture review | 解决方案架构师：非功能需求与容量估算、模块化单体优先、Java 与 TypeScript 双技术线选型、10 套参考架构、托管部署、ADR 与架构评审",
   "author": {
     "name": "shining319",
     "email": "lofterruyuan@gmail.com",
@@ -10,5 +10,5 @@
   "homepage": "https://github.com/shining319/claude-code-single-person-workflow#readme",
   "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
-  "keywords": ["architecture", "solution-design", "tech-stack", "deployment"]
+  "keywords": ["architecture", "solution-design", "system-design", "tech-stack", "deployment", "capacity-planning", "adr", "architecture-review", "spring-boot", "typescript", "nextjs"]
 }
