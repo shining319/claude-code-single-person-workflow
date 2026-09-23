@@ -33,7 +33,7 @@ A curated collection of Claude Code plugins designed specifically for single-per
 
 | Plugin | Description | Type |
 |--------|-------------|------|
-| **[academic-writing](plugins/academic-writing)** | Professional academic writing for Chinese and English | Skill |
+| **[academic-writing](plugins/academic-writing)** | Academic writing for Chinese and English: write new, polish drafts to reduce AI markers, match your style | Skill |
 | **[database-designer](plugins/database-designer)** | Complete database schema design with ER diagrams | Skill |
 | **[product-manager](plugins/product-manager)** | Requirements analysis and PRD creation | Skill |
 | **[ui-designer](plugins/ui-designer)** | UI/UX design with detailed specifications | Skill |
@@ -199,7 +199,7 @@ For details, see [User Guide](docs/en/user-guide.md#saving-output).
 
 | 插件 | 描述 | 类型 |
 |------|------|------|
-| **[academic-writing](plugins/academic-writing)** | 中英文专业学术写作 | 技能 |
+| **[academic-writing](plugins/academic-writing)** | 中英文学术写作：新写、润色降AI痕迹、模仿文风 | 技能 |
 | **[database-designer](plugins/database-designer)** | 完整的数据库架构设计和ER图 | 技能 |
 | **[product-manager](plugins/product-manager)** | 需求分析和PRD创建 | 技能 |
 | **[ui-designer](plugins/ui-designer)** | UI/UX设计及详细规格 | 技能 |

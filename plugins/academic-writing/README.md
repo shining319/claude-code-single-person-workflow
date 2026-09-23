@@ -10,8 +10,10 @@ Professional academic writing assistant for Chinese and English university assig
 
 ### Features
 
+- **Three Modes**: Write new drafts, revise/polish existing drafts, or learn your style from past writing samples
+- **Plain Language**: Short sentences and everyday words in every document, in both languages
 - **Bilingual Support**: Chinese and English writing
-- **Natural Writing Style**: Avoids AI detection markers
+- **Natural Writing Style**: Checks drafts against a Chinese/English list of common AI words and patterns
 - **Academic Quality**: Professional yet accessible language
 - **Structured Content**: Clear chapter divisions with descriptive headings
 - **Specific Examples**: Concrete details rather than generic statements
@@ -35,7 +37,13 @@ Use this plugin when you need help with:
 
 ```
 User: Help me write a technical analysis report about cloud computing adoption
-Assistant: [Activates academic-writing-style skill and produces natural, flowing academic content]
+Assistant: [Shows an outline for confirmation, then writes the report chapter by chapter]
+
+User: Polish this draft and make it sound less like AI: <draft>
+Assistant: [Lists the problems found, then saves a revised version with a short change summary]
+
+User: Here are two essays I wrote before. Write the new report in my style.
+Assistant: [Builds style-profile.md from the samples and uses it for the new report]
 ```
 
 ### Output File Locations
@@ -48,7 +56,9 @@ outputs/
     └── writing/
         ├── technical-analysis.md
         ├── research-review.md
-        └── case-study.md
+        ├── case-study.md
+        ├── <original-name>-revised.md   # Revised draft
+        └── style-profile.md             # Your style profile
 ```
 
 **File Naming Convention:**
@@ -68,8 +78,10 @@ outputs/
 
 ### 功能特性
 
+- **三种模式**: 新写、润色改写已有稿件、从你以前的文章中学习文风
+- **行文朴素**: 所有文章都用短句和平实的用词，中英文都一样
 - **双语支持**: 中文和英文写作
-- **自然写作风格**: 避免AI检测标记
+- **自然写作风格**: 对照中英文 AI 高频词和句式清单检查稿件
 - **学术质量**: 专业且易读的语言
 - **结构化内容**: 清晰的章节划分和描述性标题
 - **具体示例**: 具体细节而非泛泛而谈
@@ -93,7 +105,13 @@ claude plugin install github:shining319/claude-code-single-person-workflow/plugi
 
 ```
 用户: 帮我写一篇关于云计算采用的技术分析报告
-助手: [激活 academic-writing-style skill，生成自然流畅的学术内容]
+助手: [先给出大纲请你确认，再按章节写完报告]
+
+用户: 帮我润色这篇稿子，降低AI痕迹：<稿件>
+助手: [先列出发现的问题，再保存修改后的版本，并附简短的修改说明]
+
+用户: 这是我以前写的两篇文章，按我的文风写这篇新报告
+助手: [根据样本生成 style-profile.md，并按它写新报告]
 ```
 
 ### 文件输出位置
@@ -106,7 +124,9 @@ outputs/
     └── writing/
         ├── technical-analysis.md
         ├── research-review.md
-        └── case-study.md
+        ├── case-study.md
+        ├── <原文件名>-revised.md        # 润色后的稿件
+        └── style-profile.md             # 你的风格档案
 ```
 
 **文件命名规范：**

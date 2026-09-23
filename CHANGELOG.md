@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-09-23
+
+### Added
+
+#### academic-writing-style Skill
+- **Three writing modes**: write new (mode A), revise/polish existing drafts (mode B), learn the user's style from samples (mode C)
+  - Mode A: outline confirmation for 1500+ Chinese characters / 1000+ English words; long documents written chapter by chapter
+  - Mode B: diagnosis report first, then rewrite that keeps facts, data, citations and opinions; outputs `<name>-revised.md` with a change summary; light polish by default, deep rewrite on request
+  - Mode C: 7-dimension style analysis saved as reusable `style-profile.md`
+- **Plain-writing hard rule**: applies to every document type, mode and language. Chinese sentences mostly under 40 characters (split over 60); English average 15–20 words (rarely over 25), at most one subordinate clause
+- **`references/ai-markers.md`**: Chinese and English AI-marker checklist (long sentences, high-frequency words, sentence patterns, structural issues) with replacements and a 4-step self-check
+- **`references/revision-and-style.md`**: detailed steps for modes B and C
+
+### Changed
+
+#### academic-writing-style Skill
+- `SKILL.md`: added mode routing, rule priority (school format > plain writing > style profile > defaults), outline and section-by-section writing, self-check against ai-markers; description adds revise/polish/style triggers
+- `writing-guidelines.md`: plain writing is now principle 1; English sentence limit tightened from 30 to 25 words; transition words like "however / 然而" changed from banned to "use sparingly"; the 5-row replacement table now points to `ai-markers.md`
+- `chinese-examples.md` / `english-examples.md`: "expected style" passages rewritten in plain language (Chinese average sentence length 39.9 → 24.2 characters; no sentences over the limits; dashes and "however / crucial / demonstrate / 此外" removed)
+
+#### Agents, Commands and Configuration
+- **technical-writer agent**: mode selection, outline confirmation, plain-writing rule, ai-markers self-check, revision/style triggers and outputs
+- **Commands** `/academic-writing`, `/spw-writing` (both suites): bilingual descriptions and new argument hints covering the three modes
+- **academic-writing plugin.json**: bilingual description, new keywords, version 1.0.0 → 1.1.0
+- **marketplace.json**: version 1.4.0 → 1.5.0; academic-writing entry description updated; academic-writing, product-development-suite and product-workflow-agents versions → 1.1.0
+
+#### Documentation
+- Updated README.md, docs/en|zh/user-guide.md, and the academic-writing, product-development-suite and product-workflow-agents READMEs
+
 ## [1.4.0] - 2025-01-12
 
 ### Added

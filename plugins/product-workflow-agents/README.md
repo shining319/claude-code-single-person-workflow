@@ -14,7 +14,7 @@ Intelligent workflow agents that orchestrate multiple skills for complete produc
 2. **Solution Architect** - Technical architecture and tech stack selection
 3. **Database Architect** - Database schema design with ER diagrams
 4. **UI/UX Designer** - Interface design and specifications
-5. **Technical Writer** - Documentation and technical writing
+5. **Technical Writer** - Documentation and technical writing; polishes drafts and matches your style
 6. **Full Stack Product Builder** - End-to-end orchestrator
 7. **UI/UX Pro Max** - Data-driven design intelligence with searchable knowledge base
 
@@ -98,7 +98,7 @@ outputs/
 2. **解决方案架构师** - 技术架构和技术栈选择
 3. **数据库架构师** - 数据库架构设计和ER图
 4. **UI/UX设计师** - 界面设计和规格说明
-5. **技术文档专家** - 文档和技术写作
+5. **技术文档专家** - 文档和技术写作，支持润色改写和模仿文风
 6. **全栈产品构建者** - 端到端编排
 7. **UI/UX Pro Max** - 数据驱动的设计智能，含可搜索的知识库
 

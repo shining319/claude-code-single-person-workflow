@@ -1,6 +1,6 @@
 {
   "name": "single-person-workflow-marketplace",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Comprehensive plugin marketplace for solo developers and creators, featuring tools for writing, database design, product management, UI/UX design, and solution architecture",
   "owner": {
     "name": "shining319",
@@ -13,8 +13,8 @@
     {
       "name": "academic-writing",
       "source": "./plugins/academic-writing",
-      "version": "1.0.0",
-      "description": "Academic writing assistant for Chinese and English",
+      "version": "1.1.0",
+      "description": "Academic writing assistant for Chinese and English: write new, polish drafts to reduce AI markers, match your style | 中英文学术写作助手：新写、润色降AI痕迹、模仿文风",
       "category": "writing"
     },
     {
@@ -55,14 +55,14 @@
     {
       "name": "product-development-suite",
       "source": "./plugins/product-development-suite",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Complete suite with all skills included",
       "category": "productivity"
     },
     {
       "name": "product-workflow-agents",
       "source": "./plugins/product-workflow-agents",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Intelligent workflow agents for complete product development",
       "category": "automation"
     }

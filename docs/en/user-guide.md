@@ -67,6 +67,15 @@ If you installed the product-development-suite or full marketplace:
 - Creating technical reports
 - Preparing project documentation
 - Drafting case studies and analyses
+- Polishing an existing draft or making it sound less like AI
+- Writing in your own style, based on your past essays
+
+**Three Modes:**
+- **Write new**: longer pieces (1500+ Chinese characters / 1000+ English words) start with an outline for you to confirm
+- **Revise / polish**: lists the problems first, then saves `<name>-revised.md` with a change summary; facts, data and citations are kept
+- **Learn style**: builds a reusable `style-profile.md` from your samples
+
+Every mode writes in plain language with short sentences.
 
 **Slash Commands:**
 - `/academic-writing [assignment type and topic]`
@@ -77,6 +86,8 @@ If you installed the product-development-suite or full marketplace:
 "Help me write a technical report on cloud computing"
 "I need to create a research paper about AI ethics"
 "Write an academic analysis of microservices architecture"
+"Polish this draft and make it sound less like AI"
+"Here are my past essays, write the new report in my style"
 ```
 
 **Slash Command Examples:**
@@ -86,7 +97,8 @@ If you installed the product-development-suite or full marketplace:
 ```
 
 **Output:**
-- Natural, flowing prose
+- Natural, flowing prose in plain language
+- Short sentences (Chinese under 60 characters, English under 25 words)
 - Proper academic structure
 - Clear chapter divisions
 - Professional yet accessible language
