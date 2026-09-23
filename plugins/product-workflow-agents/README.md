@@ -10,7 +10,7 @@ Intelligent workflow agents that orchestrate multiple skills for complete produc
 
 ### Available Agents
 
-1. **Product Manager** - Requirements analysis and PRD creation
+1. **Product Manager** - PRD first, then a backend/frontend Task Backlog after architecture and database design
 2. **Solution Architect** - System architecture, capacity estimation, stack selection, deployment, ADRs and architecture review
 3. **Database Architect** - Database schema design with ER diagrams
 4. **UI/UX Designer** - Interface design and specifications
@@ -36,11 +36,13 @@ When you use the **Full Stack Product Builder**, it orchestrates all specialized
 ```
 Your Idea
    ↓
-Product Manager → PRD + User Personas
+Product Manager → PRD (Section 6 "Technical Architecture" as placeholders)
    ↓
 Solution Architect → Architecture + Tech Stack
    ↓
 Database Architect → Database Schema + SQL
+   ↓
+Product Manager → PRD Section 6 filled + Task Backlog
    ↓
 UI/UX Designer → Design Specs + User Flows
    ↓
@@ -94,7 +96,7 @@ outputs/
 
 ### 可用代理
 
-1. **产品经理** - 需求分析和PRD创建
+1. **产品经理** - 先出 PRD，架构与数据库设计完成后再出前后端任务 Backlog
 2. **解决方案架构师** - 系统架构、容量估算、技术选型、部署方案、ADR 与架构评审
 3. **数据库架构师** - 数据库架构设计和ER图
 4. **UI/UX设计师** - 界面设计和规格说明
@@ -120,11 +122,13 @@ outputs/
 ```
 您的想法
    ↓
-产品经理 → PRD + 用户画像
+产品经理 → PRD（第 6 章「技术架构」为占位符）
    ↓
 解决方案架构师 → 架构 + 技术栈
    ↓
 数据库架构师 → 数据库架构 + SQL
+   ↓
+产品经理 → 回填 PRD 第 6 章 + 任务 Backlog
    ↓
 UI/UX设计师 → 设计规格 + 用户流程
    ↓

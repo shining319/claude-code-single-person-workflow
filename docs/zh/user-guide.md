@@ -36,7 +36,7 @@
 #### 单技能插件命令
 - `/academic-writing [作业类型和主题]` - 学术写作助手
 - `/database-designer [业务领域或需求]` - 完整数据库架构设计
-- `/product-manager [产品想法或需求]` - 产品管理和PRD创建
+- `/product-manager [产品想法或需求]` - 先出 PRD，架构与数据库设计完成后再出任务 Backlog
 - `/ui-designer [要设计的页面或功能]` - UI/UX设计与规范
 - `/solution-architect [系统或应用需求]` - 技术架构设计
 
@@ -44,7 +44,7 @@
 如果您安装了 product-development-suite 或完整市场:
 - `/spw-db [需求]` - 数据库架构设计
 - `/spw-ui [页面或功能]` - UI/UX界面设计
-- `/spw-prd [产品想法]` - 产品管理和PRD
+- `/spw-prd [产品想法]` - PRD 与任务 Backlog
 - `/spw-arch [系统需求]` - 技术架构
 - `/spw-writing [作业主题]` - 学术写作
 
@@ -144,38 +144,43 @@
 
 ### 3. 产品经理
 
-**用途:** 将想法转化为专业的产品需求文档(PRD)。
+**用途:** 把一个想法变成两份结构固定的文档：**PRD**（`prd.md`）和**任务 Backlog**（`task-backlog.md`）。
 
 **何时使用:**
-- 分析产品需求
-- 创建用户画像
-- 编写PRD
-- 规划MVP功能
-- 定义用户故事
+- 编写包含用户画像、Epic、用户故事、验收标准和故事点的 PRD
+- 规划 MVP 范围和 Sprint
+- 把完善后的 PRD 拆成带工时和依赖的前后端任务
 
 **斜杠命令:**
-- `/product-manager [产品想法或需求]`
-- `/spw-prd [产品想法]` (如果使用套件)
+- `/product-manager [产品想法，或 PRD + 架构文档 + 数据库文档]`
+- `/spw-prd [产品想法，或 PRD + 架构文档 + 数据库文档]` (如果使用套件)
+
+> ⚠️ **推荐顺序：先出 PRD，最后出任务 Backlog。**
+> 任务 Backlog 里会写真实的框架、表名和 API 路径，所以只有三项前置条件都满足时才会生成：
+> 1. 架构设计文档（`/solution-architect` 或 `/spw-arch`）
+> 2. 数据库设计文档（`/database-designer` 或 `/spw-db`）
+> 3. 完善后的 PRD（第 6 章「技术架构」已填写）
+>
+> 如果没有提供架构文档，也没有指定技术栈，PRD 第 6 章会写成占位符，并标注「等待架构设计后补充」。PRD 最后一章「下一步：任务 Backlog」会列出还缺哪些前置条件。提前要求生成 Backlog 时，得到的是这份缺失清单，而不是 Backlog。
+
+**推荐流程:**
+```
+1. /product-manager "你的想法"                        → prd.md
+2. /solution-architect "基于 prd.md"                  → 架构文档
+3. /database-designer "基于 prd.md 和架构文档"          → 数据库设计
+4. /product-manager "根据以上三份文档生成任务 Backlog"    → 回填 PRD 第 6 章 + task-backlog.md
+```
 
 **自然语言触发:**
 ```
 "为移动任务管理应用创建PRD"
-"分析健身追踪平台的需求"
-"帮我为在线教育系统定义用户画像"
-```
-
-**斜杠命令示例:**
-```
-/product-manager "具有团队协作功能的移动任务管理应用"
-/spw-prd "具有社交功能的健身追踪平台"
+"为健身追踪平台写用户故事并规划两个 Sprint"
+"把 docs/prd.md 拆成前后端任务"
 ```
 
 **输出内容：**
-- 全面的需求分析
-- 用户画像和场景
-- 功能规格说明
-- PRD文档
-- 可行性评估
+- `prd.md`：产品概述、范围与假设、用户画像、Epic 与用户故事、核心流程、优先级矩阵、非功能需求（含无障碍与隐私）、技术架构、Sprint 规划、完成定义、风险、待确认问题、下一步
+- `task-backlog.md`（前置条件满足后）：B*/F* 任务（验收标准、工时、依赖）、Sprint 工时汇总、关键路径与开工顺序、API 接口清单
 
 ### 4. UI设计师
 
@@ -648,6 +653,8 @@ git commit -m "添加初始数据库设计"
 
 /ui-designer "用于博客管理的管理界面,包含文章编辑器和分析功能"
 ```
+
+> 上面的 PRD 因为没有提供架构，第 6 章是占位符。完成 `/solution-architect` 和 `/database-designer` 后，带上三份文档再运行一次 `/product-manager`，即可回填第 6 章并生成 `task-backlog.md`。
 
 ### 示例3:API服务(使用套件命令)
 

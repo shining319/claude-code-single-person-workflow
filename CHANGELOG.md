@@ -5,6 +5,69 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.0] - 2026-09-23
+
+### Added
+
+#### product-manager Skill
+- **Two fixed deliverables**: `prd.md` (PRD) and `task-backlog.md` (Task Backlog). The structure follows the user's reference examples
+- **PRD template** (`references/prd-template.md`), 11 sections: overview, personas, epics and user stories with acceptance criteria and story points, priority matrix, NFRs, technical architecture, sprint planning, definition of done, risks. New compared with the reference example:
+  - 1.4 Out of Scope & Assumptions
+  - a Core flow for every P0 epic
+  - 5.5 Accessibility & Privacy
+  - Section 10 Open Questions
+  - Section 11 Next Steps: Task Backlog
+  - a status line under the title
+  - an EN/ZH heading table
+- **Technical architecture placeholders**: with no architecture document and no stated stack, PRD Section 6 is written as `[TBD — pending architecture design]` under a pending notice. No technology is guessed
+- **Backlog prerequisites**: the Task Backlog is generated only when an architecture document, a database design and a completed PRD all exist. Otherwise the skill lists what is missing and the commands to run. The chat reply, PRD Section 11 and the docs all state this order
+- **Backlog template** (`references/backlog-template.md`):
+  - backend (B*) and frontend (F*) tasks per story, each with acceptance criteria, hours and dependencies
+  - breakdown rules: 0.5–5 hour tasks, a unit test task for every backend story, dependencies only on the same or earlier sprints
+  - sprint summaries and an API endpoint list
+  - **Critical Path & Start Order** for each sprint: tasks that can start now, cross-role blockers with earliest unblock hour and a workaround, and the critical path with its total hours
+- **Quality checklist** (`references/quality-checklist.md`) to run before delivery:
+  - epic points equal the sum of their stories; sprint and hour totals add up
+  - section numbering is continuous
+  - backlog frameworks match PRD Section 6; tables and APIs match the database and architecture documents
+  - dependency IDs exist, with no cycles
+  - every acceptance criterion is covered by a task
+- **Mode routing**: PRD (default), Backlog, PRD + Backlog, Blocked (a prerequisite is missing), Quick consult
+
+### Changed
+
+#### product-manager Skill
+- `SKILL.md` rewritten in English: 7-step workflow, prerequisite check, mode routing, reference map, hard rules. Output language follows the user
+- `user-persona-templates.md` now uses the four persona blocks from the reference PRD (basic information, goals & motivations, pain points & challenges, behavioral traits)
+- Template example stack checked as of 2026-09:
+  - MySQL 8.0 reached EOL in April 2026, so the example uses MySQL 8.4 LTS
+  - Spring Boot 4.x
+  - Vue 3 + Pinia + Element Plus used consistently; the reference example's "React.js 3" and its React/Vue mix are fixed
+
+#### Agents, Commands and Configuration
+- **product-manager agent**: prerequisite check, modes, five-phase workflow; tells the user the next steps when only the PRD is produced
+- **full-stack-product-builder agent**:
+  - Phase 1 produces the PRD only
+  - new Phase 4 Task Backlog runs after architecture and database design and fills PRD Section 6
+  - UI/UX and documentation move to Phases 5 and 6
+  - output tree now `docs/prd.md` + `docs/task-backlog.md`
+- **Commands** `/product-manager` and `/spw-prd` (both suites): bilingual descriptions and argument hints
+- **Versions**:
+  - product-manager plugin.json: bilingual description, new keywords, 1.0.0 → 1.1.0
+  - product-development-suite and product-workflow-agents: 1.2.0 → 1.3.0
+  - marketplace.json: 1.6.0 → 1.7.0
+
+#### Documentation
+- README.md, docs/en|zh/user-guide.md and the product-manager README describe the recommended order (PRD → architecture → database → PRD again for the backlog) and the three prerequisites
+- Output trees in README, architecture and installation guides, plugin READMEs and CLAUDE.md command table updated
+
+### Removed
+
+#### product-manager Skill
+- The Task Dependency Diagrams and the Suggested Development Timeline in the backlog, replaced by Critical Path & Start Order
+- `references/document-templates.md` and `references/design-workflow.md`, replaced by the new templates and the workflow in `SKILL.md`
+- The scattered output files `user-personas.md`, `feature-specs.md`, `user-stories.md`, `mvp-plan.md` and `requirements-analysis.md`
+
 ## [1.6.0] - 2026-09-23
 
 ### Added

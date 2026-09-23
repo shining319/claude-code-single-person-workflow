@@ -1,7 +1,7 @@
 {
   "name": "product-manager",
-  "version": "1.0.0",
-  "description": "Senior product manager for requirements analysis, user research, and PRD creation",
+  "version": "1.1.0",
+  "description": "Senior product manager: PRD with epics, user stories and sprint planning, then a backend/frontend Task Backlog once architecture and database design exist | 资深产品经理：先出含 Epic、用户故事与 Sprint 规划的 PRD，架构与数据库设计完成后再生成前后端任务 Backlog",
   "author": {
     "name": "shining319",
     "email": "lofterruyuan@gmail.com",
@@ -10,5 +10,5 @@
   "homepage": "https://github.com/shining319/claude-code-single-person-workflow#readme",
   "repository": "https://github.com/shining319/claude-code-single-person-workflow",
   "license": "MIT",
-  "keywords": ["product-management", "prd", "user-research", "requirements"]
+  "keywords": ["product-management", "prd", "user-research", "requirements", "user-stories", "sprint-planning", "backlog", "task-breakdown"]
 }

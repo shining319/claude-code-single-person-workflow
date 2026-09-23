@@ -12,7 +12,7 @@ Complete all-in-one suite for single-person product development. Includes all fi
 
 1. **Academic Writing Style** - Professional documentation and reports; also polishes drafts and matches your style
 2. **Database Designer** - Complete database schema design with ER diagrams
-3. **Product Manager** - Requirements analysis and PRD creation
+3. **Product Manager** - PRD first, then a backend/frontend Task Backlog once architecture and database design are done (`/spw-prd`)
 4. **UI Designer** - Interface design and specifications
 5. **Solution Architect** - System architecture, capacity estimation, Java/TypeScript stack selection, deployment and ADRs
 6. **UI/UX Pro Max** - Data-driven design intelligence with searchable knowledge base
@@ -80,7 +80,7 @@ outputs/
 
 1. **学术写作风格** - 专业文档和报告，支持润色改写和模仿文风
 2. **数据库设计器** - 完整的数据库架构设计和ER图
-3. **产品经理** - 需求分析和PRD创建
+3. **产品经理** - 先出 PRD，架构与数据库设计完成后再出前后端任务 Backlog（`/spw-prd`）
 4. **UI设计师** - 界面设计和规格说明
 5. **解决方案架构师** - 系统架构、容量估算、Java/TypeScript 技术选型、部署方案与 ADR
 6. **UI/UX Pro Max** - 数据驱动的设计智能，含可搜索的知识库

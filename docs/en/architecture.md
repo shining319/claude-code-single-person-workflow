@@ -218,7 +218,7 @@ This marketplace follows standardized command naming conventions to ensure consi
 
 **Examples:**
 - `/database-designer` - Database schema design
-- `/product-manager` - Product requirements and PRD
+- `/product-manager` - PRD first, Task Backlog after architecture and database design
 - `/ui-designer` - UI/UX design specifications
 - `/solution-architect` - Technical architecture design
 - `/academic-writing` - Academic writing assistance
@@ -293,7 +293,7 @@ Workflow agents orchestrate multiple skills to accomplish complex tasks. Each ag
 ```yaml
 ---
 name: product-manager
-description: "Senior product manager agent specializing in requirements analysis, user research, and PRD creation. Use when users need: product strategy, user personas, feature planning, MVP definition, or PRD documentation. | 资深产品经理代理，专注于需求分析、用户研究和PRD创建。适用于：产品策略、用户画像、功能规划、MVP定义或PRD文档。"
+description: "Senior product manager agent that delivers a PRD first and a Task Backlog once the architecture document, database design and completed PRD exist. Use when users need: PRD, user stories with acceptance criteria and story points, sprint planning, MVP scope, or backend/frontend task breakdown. | 资深产品经理代理，先交付 PRD；架构文档、数据库设计、完善后的 PRD 齐全后再交付任务 Backlog。适用于：PRD、带验收标准和故事点的用户故事、Sprint 规划、MVP 范围、前后端任务拆解。"
 model: inherit
 ---
 ```
@@ -531,7 +531,7 @@ Each skill is independent and can be installed/uninstalled separately.
 Skills and agents can be combined to create complex workflows.
 
 **Examples:**
-- Product Manager → Database Designer → UI Designer
+- Product Manager (PRD) → Solution Architect → Database Designer → Product Manager (Task Backlog)
 - Solution Architect ← Database Designer → UI Designer
 
 ### 3. Discoverability
@@ -567,8 +567,7 @@ outputs/
 └── <project-name>/              # Project name (e.g., task-management-app)
     ├── docs/                    # Product documentation (product-manager)
     │   ├── prd.md
-    │   ├── user-personas.md
-    │   └── requirements.md
+    │   └── task-backlog.md
     ├── architecture/            # Technical architecture (solution-architect)
     │   ├── system-architecture.md
     │   ├── tech-stack.md

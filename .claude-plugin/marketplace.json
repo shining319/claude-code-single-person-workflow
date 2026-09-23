@@ -1,6 +1,6 @@
 {
   "name": "single-person-workflow-marketplace",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Comprehensive plugin marketplace for solo developers and creators, featuring tools for writing, database design, product management, UI/UX design, and solution architecture",
   "owner": {
     "name": "shining319",
@@ -27,8 +27,8 @@
     {
       "name": "product-manager",
       "source": "./plugins/product-manager",
-      "version": "1.0.0",
-      "description": "Product management from requirements to PRD",
+      "version": "1.1.0",
+      "description": "Product manager: PRD first, then a backend/frontend Task Backlog after architecture and database design | 产品经理：先出 PRD，架构与数据库设计完成后再生成前后端任务 Backlog",
       "category": "product-management"
     },
     {
@@ -55,14 +55,14 @@
     {
       "name": "product-development-suite",
       "source": "./plugins/product-development-suite",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "description": "Complete suite with all skills included",
       "category": "productivity"
     },
     {
       "name": "product-workflow-agents",
       "source": "./plugins/product-workflow-agents",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "description": "Intelligent workflow agents for complete product development",
       "category": "automation"
     }

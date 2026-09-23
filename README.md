@@ -35,7 +35,7 @@ A curated collection of Claude Code plugins designed specifically for single-per
 |--------|-------------|------|
 | **[academic-writing](plugins/academic-writing)** | Academic writing for Chinese and English: write new, polish drafts to reduce AI markers, match your style | Skill |
 | **[database-designer](plugins/database-designer)** | Complete database schema design with ER diagrams | Skill |
-| **[product-manager](plugins/product-manager)** | Requirements analysis and PRD creation | Skill |
+| **[product-manager](plugins/product-manager)** | PRD with epics, user stories and sprint planning, then a backend/frontend Task Backlog | Skill |
 | **[ui-designer](plugins/ui-designer)** | UI/UX design with detailed specifications | Skill |
 | **[solution-architect](plugins/solution-architect)** | System architecture, Java/TypeScript stack selection, deployment, ADRs and architecture review | Skill |
 | **[ui-ux-pro-max](plugins/ui-ux-pro-max)** | Data-driven UI/UX design intelligence with searchable knowledge base | Skill |
@@ -132,6 +132,11 @@ Use direct commands for guaranteed activation:
 - `/ui-ux-pro-max` invokes the **skill** directly (lightweight, quick design queries)
 - `/spw-ui-pro-max` invokes the **agent** workflow (comprehensive 4-phase process: Requirements → Search → Framework Guidance → Recommendations)
 
+**⚠️ Note on Product Requirements (PRD first, Task Backlog last):**
+- `/product-manager` (or `/spw-prd`) always writes the PRD first. With no architecture document and no tech stack given, PRD Section 6 "Technical Architecture" is left as placeholders marked "pending architecture design".
+- The Task Backlog (backend/frontend tasks with hours and dependencies) is generated only when all three exist: an architecture document, a database design, and the completed PRD. Until then the PRD's last section lists what is missing.
+- Recommended order: `/product-manager` → `/solution-architect` → `/database-designer` → `/product-manager` again with the three documents → `prd.md` updated + `task-backlog.md`
+
 ### Output File Locations
 
 All generated files are organized in `outputs/<project-name>/` directory:
@@ -151,6 +156,7 @@ outputs/
 outputs/
 └── my-saas-platform/
     ├── docs/prd.md
+    ├── docs/task-backlog.md
     ├── database/schema.sql
     └── design/ui-specification.md
 ```
@@ -201,7 +207,7 @@ For details, see [User Guide](docs/en/user-guide.md#saving-output).
 |------|------|------|
 | **[academic-writing](plugins/academic-writing)** | 中英文学术写作：新写、润色降AI痕迹、模仿文风 | 技能 |
 | **[database-designer](plugins/database-designer)** | 完整的数据库架构设计和ER图 | 技能 |
-| **[product-manager](plugins/product-manager)** | 需求分析和PRD创建 | 技能 |
+| **[product-manager](plugins/product-manager)** | 含 Epic、用户故事、Sprint 规划的 PRD，以及前后端任务 Backlog | 技能 |
 | **[ui-designer](plugins/ui-designer)** | UI/UX设计及详细规格 | 技能 |
 | **[solution-architect](plugins/solution-architect)** | 系统架构、Java/TypeScript 技术选型、部署方案、ADR 与架构评审 | 技能 |
 | **[ui-ux-pro-max](plugins/ui-ux-pro-max)** | 数据驱动的UI/UX设计智能，含可搜索的知识库 | 技能 |
@@ -298,6 +304,11 @@ claude plugin install github:shining319/claude-code-single-person-workflow
 - `/ui-ux-pro-max` 直接调用 **skill**（轻量级，快速设计查询）
 - `/spw-ui-pro-max` 调用 **agent** 工作流（完整4阶段流程：需求分析 → 设计搜索 → 框架指导 → 推荐输出）
 
+**⚠️ 产品需求命令说明（先出 PRD，最后出任务 Backlog）：**
+- `/product-manager`（或 `/spw-prd`）总是先写 PRD。没有提供架构文档、也没有指定技术栈时，PRD 第 6 章「技术架构」写成占位符，并标注「等待架构设计后补充」。
+- 任务 Backlog（带工时和依赖的前后端任务）只有在架构文档、数据库设计、完善后的 PRD 三者都齐全时才会生成。在此之前，PRD 最后一章会列出还缺哪些文档。
+- 推荐顺序：`/product-manager` → `/solution-architect` → `/database-designer` → 带上三份文档再运行一次 `/product-manager` → 更新 `prd.md` 并生成 `task-backlog.md`
+
 ### 文件输出位置
 
 所有生成的文件组织在 `outputs/<project-name>/` 目录中：
@@ -317,6 +328,7 @@ outputs/
 outputs/
 └── my-saas-platform/
     ├── docs/prd.md
+    ├── docs/task-backlog.md
     ├── database/schema.sql
     └── design/ui-specification.md
 ```

@@ -36,7 +36,7 @@ Use slash commands for direct, explicit skill activation. This is faster and gua
 #### Single-Skill Plugin Commands
 - `/academic-writing [assignment type and topic]` - Academic writing assistant
 - `/database-designer [business domain or requirements]` - Complete database schema design
-- `/product-manager [product idea or requirements]` - Product management and PRD creation
+- `/product-manager [product idea or requirements]` - PRD first, Task Backlog after architecture and database design
 - `/ui-designer [page or feature to design]` - UI/UX design with specifications
 - `/solution-architect [system or application requirements]` - Technical architecture design
 
@@ -44,7 +44,7 @@ Use slash commands for direct, explicit skill activation. This is faster and gua
 If you installed the product-development-suite or full marketplace:
 - `/spw-db [requirements]` - Database schema design
 - `/spw-ui [page or feature]` - UI/UX interface design
-- `/spw-prd [product idea]` - Product management and PRD
+- `/spw-prd [product idea]` - PRD and Task Backlog
 - `/spw-arch [system requirements]` - Technical architecture
 - `/spw-writing [assignment topic]` - Academic writing
 
@@ -144,38 +144,43 @@ Every mode writes in plain language with short sentences.
 
 ### 3. Product Manager
 
-**Purpose:** Transform ideas into professional product requirements documents (PRD).
+**Purpose:** Turn an idea into two documents with a fixed structure: a **PRD** (`prd.md`) and a **Task Backlog** (`task-backlog.md`).
 
 **When to Use:**
-- Analyzing product requirements
-- Creating user personas
-- Writing PRDs
-- Planning MVP features
-- Defining user stories
+- Writing a PRD with personas, epics, user stories, acceptance criteria and story points
+- Planning MVP scope and sprints
+- Breaking a finished PRD into backend and frontend tasks with hours and dependencies
 
 **Slash Commands:**
-- `/product-manager [product idea or requirements]`
-- `/spw-prd [product idea]` (if using suite)
+- `/product-manager [product idea, or PRD + architecture + database docs]`
+- `/spw-prd [product idea, or PRD + architecture + database docs]` (if using suite)
+
+> ⚠️ **Recommended order: PRD first, Task Backlog last.**
+> The Task Backlog names real frameworks, tables and API paths, so it is generated only when all three prerequisites exist:
+> 1. an architecture design document (`/solution-architect` or `/spw-arch`)
+> 2. a database design document (`/database-designer` or `/spw-db`)
+> 3. a completed PRD (Section 6 "Technical Architecture" filled in)
+>
+> If you provide no architecture document and no tech stack, PRD Section 6 is written as placeholders marked "pending architecture design". The PRD's last section, "Next Steps: Task Backlog", shows which prerequisites are still missing. Asking for the backlog early returns that list instead of a backlog.
+
+**Recommended Flow:**
+```
+1. /product-manager "your idea"                                  → prd.md
+2. /solution-architect "based on prd.md"                         → architecture document
+3. /database-designer "based on prd.md and the architecture"     → database design
+4. /product-manager "generate the task backlog from the three documents"  → PRD Section 6 filled + task-backlog.md
+```
 
 **Natural Language Triggers:**
 ```
 "Create a PRD for a mobile task management app"
-"Analyze requirements for a fitness tracking platform"
-"Help me define user personas for an e-learning system"
-```
-
-**Slash Command Examples:**
-```
-/product-manager "mobile task management app with team collaboration"
-/spw-prd "fitness tracking platform with social features"
+"Write user stories and plan two sprints for a fitness tracking platform"
+"Break docs/prd.md into backend and frontend tasks"
 ```
 
 **Output:**
-- Comprehensive requirement analysis
-- User personas and scenarios
-- Functional specifications
-- PRD documentation
-- Feasibility assessment
+- `prd.md`: product overview, scope and assumptions, personas, epics and user stories, core flows, priority matrix, NFRs (including accessibility and privacy), technical architecture, sprint planning, definition of done, risks, open questions, next steps
+- `task-backlog.md` (after the prerequisites): B*/F* tasks with acceptance criteria, hours and dependencies, sprint summaries, Critical Path & Start Order, API endpoint list
 
 ### 4. UI Designer
 
@@ -648,6 +653,8 @@ User: "Design the admin interface"
 
 /ui-designer "admin interface for blog management with post editor and analytics"
 ```
+
+> The PRD above has placeholders in Section 6 because no architecture was given. After `/solution-architect` and `/database-designer`, run `/product-manager` again with the three documents to fill Section 6 and generate `task-backlog.md`.
 
 ### Example 3: API Service (Using Suite Commands)
 

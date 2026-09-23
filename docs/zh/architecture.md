@@ -218,7 +218,7 @@ triggers:
 
 **示例:**
 - `/database-designer` - 数据库架构设计
-- `/product-manager` - 产品需求和PRD
+- `/product-manager` - 先出 PRD，架构与数据库设计完成后再出任务 Backlog
 - `/ui-designer` - UI/UX设计规格
 - `/solution-architect` - 技术架构设计
 - `/academic-writing` - 学术写作辅助
@@ -293,7 +293,7 @@ triggers:
 ```yaml
 ---
 name: product-manager
-description: "Senior product manager agent specializing in requirements analysis, user research, and PRD creation. Use when users need: product strategy, user personas, feature planning, MVP definition, or PRD documentation. | 资深产品经理代理，专注于需求分析、用户研究和PRD创建。适用于：产品策略、用户画像、功能规划、MVP定义或PRD文档。"
+description: "Senior product manager agent that delivers a PRD first and a Task Backlog once the architecture document, database design and completed PRD exist. Use when users need: PRD, user stories with acceptance criteria and story points, sprint planning, MVP scope, or backend/frontend task breakdown. | 资深产品经理代理，先交付 PRD；架构文档、数据库设计、完善后的 PRD 齐全后再交付任务 Backlog。适用于：PRD、带验收标准和故事点的用户故事、Sprint 规划、MVP 范围、前后端任务拆解。"
 model: inherit
 ---
 ```
@@ -531,7 +531,7 @@ model: opus  # ❌ 不必要 - haiku 或 inherit 就可以
 技能和代理可以组合创建复杂的工作流。
 
 **示例：**
-- 产品经理 → 数据库设计器 → UI设计师
+- 产品经理（PRD）→ 解决方案架构师 → 数据库设计器 → 产品经理（任务 Backlog）
 - 解决方案架构师 ← 数据库设计器 → UI设计师
 
 ### 3. 可发现性
@@ -567,8 +567,7 @@ outputs/
 └── <project-name>/              # 项目名称（如：task-management-app）
     ├── docs/                    # 产品文档（product-manager）
     │   ├── prd.md
-    │   ├── user-personas.md
-    │   └── requirements.md
+    │   └── task-backlog.md
     ├── architecture/            # 技术架构（solution-architect）
     │   ├── system-architecture.md
     │   ├── tech-stack.md

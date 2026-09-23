@@ -233,6 +233,7 @@ outputs/<project-name>/
 outputs/
 └── my-saas-platform/
     ├── docs/prd.md
+    ├── docs/task-backlog.md
     ├── database/schema.sql
     └── design/ui-specification.md
 ```
